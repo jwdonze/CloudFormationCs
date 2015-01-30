@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{161B339F-4B42-427C-B26F-64CFB6165909}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CloudFormationCsTests</RootNamespace>
+    <AssemblyName>CloudFormationCsTests</AssemblyName>
+    <UseMSBuildEngine>False</UseMSBuildEngine>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Web.Extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CompareUtils.cs" />
+    <Compile Include="Resources\AutoScaling\AutoScalingGroupTests.cs" />
+    <Compile Include="Resources\AutoScaling\LaunchConfigurationTests.cs" />
+    <Compile Include="Resources\AutoScaling\ScalingPolicyTests.cs" />
+    <Compile Include="Resources\AutoScaling\ScheduledActionTests.cs" />
+    <Compile Include="Resources\AutoScaling\TriggerTests.cs" />
+    <Compile Include="Resources\CloudFormation\AuthenticationTests.cs" />
+    <Compile Include="Resources\CloudFormation\CustomResourceTests.cs" />
+    <Compile Include="Resources\CloudFormation\InitTests.cs" />
+    <Compile Include="Resources\CloudFormation\StackTests.cs" />
+    <Compile Include="Resources\CloudFormation\WaitConditionHandleTests.cs" />
+    <Compile Include="Resources\CloudFormation\WaitConditionTests.cs" />
+    <Compile Include="Resources\CloudWatch\AlarmTests.cs" />
+    <Compile Include="Resources\ElasticLoadBalancing\LoadBalancerTests.cs" />
+    <Compile Include="Resources\IAM\AccessKeyTests.cs" />
+    <Compile Include="Resources\IAM\GroupTests.cs" />
+    <Compile Include="Resources\IAM\InstanceProfileTests.cs" />
+    <Compile Include="Resources\IAM\PolicyTests.cs" />
+    <Compile Include="Resources\IAM\RoleTests.cs" />
+    <Compile Include="Resources\IAM\UserTests.cs" />
+    <Compile Include="Resources\IAM\UserToGroupAdditionTests.cs" />
+    <Compile Include="Resources\Route53\RecordSetTests.cs" />
+    <Compile Include="Resources\S3\BucketPolicyTests.cs" />
+    <Compile Include="Resources\S3\BucketTests.cs" />
+    <Compile Include="Resources\EC2\CustomerGatewayTests.cs" />
+    <Compile Include="Resources\EC2\DHCPOptionsTests.cs" />
+    <Compile Include="Resources\EC2\EIPAssociationTests.cs" />
+    <Compile Include="Resources\EC2\EIPTests.cs" />
+    <Compile Include="Resources\EC2\InstanceTests.cs" />
+    <Compile Include="Resources\EC2\InternetGatewayTests.cs" />
+    <Compile Include="Resources\EC2\NetworkAclEntryTests.cs" />
+    <Compile Include="Resources\EC2\NetworkAclTests.cs" />
+    <Compile Include="Resources\EC2\NetworkInterfaceAttachmentTests.cs" />
+    <Compile Include="Resources\EC2\NetworkInterfaceTests.cs" />
+    <Compile Include="Resources\EC2\RouteTableTests.cs" />
+    <Compile Include="Resources\EC2\RouteTests.cs" />
+    <Compile Include="Resources\EC2\SecurityGroupEgressTests.cs" />
+    <Compile Include="Resources\EC2\SecurityGroupIngressTests.cs" />
+    <Compile Include="Resources\EC2\SecurityGroupTests.cs" />
+    <Compile Include="Resources\EC2\SubnetNetworkAclAssociationTests.cs" />
+    <Compile Include="Resources\EC2\SubnetRouteTableAssociationTests.cs" />
+    <Compile Include="Resources\EC2\SubnetTests.cs" />
+    <Compile Include="Resources\EC2\VolumeAttachmentTests.cs" />
+    <Compile Include="Resources\EC2\VolumeTests.cs" />
+    <Compile Include="Resources\EC2\VPCDHCPOptionsAssociationTests.cs" />
+    <Compile Include="Resources\EC2\VPCGatewayAttachmentTests.cs" />
+    <Compile Include="Resources\EC2\VPCTests.cs" />
+    <Compile Include="Resources\EC2\VPNConnectionRouteTests.cs" />
+    <Compile Include="Resources\EC2\VPNConnectionTests.cs" />
+    <Compile Include="Resources\EC2\VPNGatewayRoutePropagationTests.cs" />
+    <Compile Include="Resources\EC2\VPNGatewayTests.cs" />
+    <Compile Include="CompareTests.cs" />
+    <Compile Include="Resources\DynamoDB\TableTests.cs" />
+    <Compile Include="Resources\CloudFront\DistributionTests.cs" />
+    <Compile Include="Resources\ElastiCache\CacheClusterTests.cs" />
+    <Compile Include="Resources\ElastiCache\ParameterGroupTests.cs" />
+    <Compile Include="Resources\ElastiCache\SecurityGroupIngressTests.cs" />
+    <Compile Include="Resources\ElastiCache\SecurityGroupTests.cs" />
+    <Compile Include="Resources\ElastiCache\SubnetGroupTests.cs" />
+    <Compile Include="Resources\ElasticBeanstalk\ApplicationTests.cs" />
+    <Compile Include="Resources\ElasticBeanstalk\ApplicationVersionTests.cs" />
+    <Compile Include="Resources\ElasticBeanstalk\ConfigurationTemplateTests.cs" />
+    <Compile Include="Resources\ElasticBeanstalk\EnvironmentTests.cs" />
+    <Compile Include="Resources\OpsWorks\AppTests.cs" />
+    <Compile Include="Resources\OpsWorks\ElasticLoadBalancerAttachmentTests.cs" />
+    <Compile Include="Resources\OpsWorks\InstanceTests.cs" />
+    <Compile Include="Resources\OpsWorks\LayerTests.cs" />
+    <Compile Include="Resources\OpsWorks\StackTests.cs" />
+    <Compile Include="Resources\RDS\DBInstanceTests.cs" />
+    <Compile Include="Resources\RDS\DBParameterGroupTests.cs" />
+    <Compile Include="Resources\RDS\DBSecurityGroupIngressTests.cs" />
+    <Compile Include="Resources\RDS\DBSecurityGroupTests.cs" />
+    <Compile Include="Resources\RDS\DBSubnetGroupTests.cs" />
+    <Compile Include="Resources\Redshift\ClusterParameterGroupTests.cs" />
+    <Compile Include="Resources\Redshift\ClusterSecurityGroupIngressTests.cs" />
+    <Compile Include="Resources\Redshift\ClusterSecurityGroupTests.cs" />
+    <Compile Include="Resources\Redshift\ClusterSubnetGroupTests.cs" />
+    <Compile Include="Resources\Redshift\ClusterTests.cs" />
+    <Compile Include="Resources\SNS\TopicPolicyTests.cs" />
+    <Compile Include="Resources\SNS\TopicTests.cs" />
+    <Compile Include="Resources\SDB\DomainTests.cs" />
+    <Compile Include="Resources\SQS\QueuePolicyTests.cs" />
+    <Compile Include="Resources\SQS\QueueTests.cs" />
+    <Compile Include="ParameterTests.cs" />
+    <Compile Include="MappingTests.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\CloudFormationCs\CloudFormationCs.csproj">
+      <Project>{E123AF0B-2762-4444-A731-A25C5C496A2F}</Project>
+      <Name>CloudFormationCs</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="README.txt" />
+  </ItemGroup>
+</Project>
