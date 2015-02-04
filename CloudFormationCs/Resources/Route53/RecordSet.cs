@@ -5,19 +5,6 @@ namespace CloudFormationCs.Resources.Route53
 {
     public class RecordSet : Resource
     {
-        private NameTypes nameTypes;
-        private string p;
-        private string eip1;
-        private ElbInfo elbInfo;
-        private string p1;
-        private string p2;
-
-        public class ElbInfo
-        {
-            public string DNSName { get; set; }
-            public string HostedZoneId { get; set; }
-        }
-
         [Required(RequiredAttribute.RequirementTypes.Conditional)]
         public AliasTarget AliasTarget { get; set; }
 
@@ -60,29 +47,6 @@ namespace CloudFormationCs.Resources.Route53
         public RecordSet(string resourceIdentifier)
             : base(resourceIdentifier)
         {
-        }
-
-        public RecordSet(NameTypes nameTypes, string p, string eip1, ElbInfo elbInfo)
-        {
-            // TODO: Complete member initialization
-            this.nameTypes = nameTypes;
-            this.p = p;
-            this.eip1 = eip1;
-            this.elbInfo = elbInfo;
-        }
-
-        public RecordSet(NameTypes nameTypes, string p1, string p2)
-        {
-            // TODO: Complete member initialization
-            this.nameTypes = nameTypes;
-            this.p1 = p1;
-            this.p2 = p2;
-        }
-
-        public RecordSet(NameTypes nameTypes)
-        {
-            // TODO: Complete member initialization
-            this.nameTypes = nameTypes;
         }
 
         public static string EscapeText(string stringIn)

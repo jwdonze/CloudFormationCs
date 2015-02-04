@@ -9,6 +9,8 @@ namespace CloudFormationCs.Resources.CloudFormation
 
         public Dictionary<String, String[]> yum { get; set; }
 
+        public Dictionary<String, String[]> apt { get; set; }
+
         public Dictionary<String, String[]> rubygems { get; set; }
     }
 }
