@@ -61,9 +61,9 @@ namespace CloudFormationCsTests
 
         public static string TryFormat(string json)
         {
-            return TryFormat(json, false);
+            return TryFormat(json, false, "");
         }
-        public static string TryFormat(string json, bool sort)
+        public static string TryFormat(string json, bool sort, string name)
         {
             try
             {
@@ -85,7 +85,7 @@ namespace CloudFormationCsTests
             }
             catch (Exception ex)
             {
-                Console.WriteLine("excption formatting: " + ex.Message);
+                Console.WriteLine("excption formatting " + name + ": " + ex.Message);
                 return json;
             }
         }
