@@ -53,6 +53,7 @@
     <Compile Include="Enumerations\ArchTypes.cs" />
     <Compile Include="Enumerations\Regions.cs" />
     <Compile Include="Functions\Fn__FindInMap.cs" />
+    <Compile Include="Resources\AsgTag.cs" />
     <Compile Include="Resources\AutoScaling\AutoScalingGroup.cs" />
     <Compile Include="Resources\AutoScaling\LaunchConfiguration.cs" />
     <Compile Include="Resources\AutoScaling\ScalingPolicy.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Resources\EC2\NetworkAclEntry.cs" />
     <Compile Include="Resources\EC2\NetworkInterface.cs" />
     <Compile Include="Resources\EC2\NetworkInterfaceAttachment.cs" />
+    <Compile Include="Resources\EC2\NetworkInterfaceEmbedded.cs" />
     <Compile Include="Resources\EC2\Route.cs" />
     <Compile Include="Resources\EC2\RouteTable.cs" />
     <Compile Include="Resources\EC2\SecurityGroup.cs" />

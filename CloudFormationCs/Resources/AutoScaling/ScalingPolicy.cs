@@ -2,6 +2,9 @@ using System;
 
 namespace CloudFormationCs.Resources.AutoScaling
 {
+    /// <summary>
+    /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html
+    /// </summary>
     public class ScalingPolicy : Resource
     {
         public String AdjustmentType { get; set; }

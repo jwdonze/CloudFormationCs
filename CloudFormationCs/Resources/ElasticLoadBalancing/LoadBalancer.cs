@@ -40,6 +40,9 @@ namespace CloudFormationCs.Resources.ElasticLoadBalancing
         [Required(false)]
         public ElasticLoadBalancingPolicy[] Policies { get; set; }
 
+        /// <summary>
+        /// internal or internet-facing
+        /// </summary>
         [Required(false)]
         public String Scheme { get; set; }
 

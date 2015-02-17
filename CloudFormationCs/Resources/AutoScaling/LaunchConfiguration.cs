@@ -1,7 +1,11 @@
 using System;
+using System.Web.Script.Serialization;
 
 namespace CloudFormationCs.Resources.AutoScaling
 {
+    /// <summary>
+    /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html
+    /// </summary>
     public class LaunchConfiguration : Resource
     {
         public Boolean AssociatePublicIpAddress { get; set; }
@@ -23,9 +27,12 @@ namespace CloudFormationCs.Resources.AutoScaling
 
         public String KernelId { get; set; }
 
-        public String KeyName { get; set; }
+        public StringRef KeyName { get; set; }
 
         public String RamDiskId { get; set; }
+
+        [ScriptIgnore]
+        public StringRef SecurityGroup { set { this.SecurityGroups = new StringRef[] { value, }; } }
 
         public StringRef[] SecurityGroups { get; set; }
 

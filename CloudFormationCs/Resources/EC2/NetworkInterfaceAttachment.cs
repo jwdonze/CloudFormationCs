@@ -25,11 +25,9 @@ namespace CloudFormationCs.Resources.EC2
         {
         }
 
-        public NetworkInterfaceAttachment(StringRef resourceIdentifier, int deviceIndex)
-            : base()
+        public NetworkInterfaceAttachment(string resourceIdentifier)
+            : base(resourceIdentifier)
         {
-            NetworkInterfaceId = resourceIdentifier;
-            DeviceIndex = deviceIndex;
         }
     }
 }

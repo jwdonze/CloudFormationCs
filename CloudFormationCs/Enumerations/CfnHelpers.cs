@@ -27,6 +27,10 @@ namespace CloudFormationCs
         {
             return nameIn.ToString().Replace("_", "-");
         }
+        public static string GetZoneName(AvailabilityZones name)
+        {
+            return name.ToString().Replace("_", "-");
+        }
         public static string GetInstnaceName(InstanceTypes nameIn)
         {
             return nameIn.ToString().Replace("_", ".");

@@ -832,8 +832,27 @@ namespace CloudFormationCs.Resources.IAM
 
         sns_Publish,
 
+        sqs_SendMessage,
         sqs_ReceiveMessage,
+        sqs_ChangeMessageVisibility,
         sqs_DeleteMessage,
+        sqs_GetQueueAttributes,
+        sqs_GetQueueUrl,
+        sqs_CreateQueue,
+        sqs_DeleteQueue,
+        sqs_ListQueues,
+
+        route53_STAR,
+        route53_ChangeResourceRecordSets,
+        route53_ListResourceRecordSets,
+        route53_GetChange,
+        route53_GetGeoLocation,
+        route53_GetHostedZone,
+        route53_ListGeoLocations,
+        route53_ListHostedZones,
+        route53_CreateHostedZone,
+        route53_DeleteHostedZone,
+
         sts_AssumeRole,
 
         sqs_STAR,

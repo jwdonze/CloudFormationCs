@@ -8,10 +8,10 @@ namespace CloudFormationCs.Resources.EC2
     public class VPCDHCPOptionsAssociation : Resource
     {
         [Required(true)]
-        public String DhcpOptionsId { get; set; }
+        public StringRef DhcpOptionsId { get; set; }
 
         [Required(true)]
-        public String VpcId { get; set; }
+        public StringRef VpcId { get; set; }
 
         public VPCDHCPOptionsAssociation()
             : base()

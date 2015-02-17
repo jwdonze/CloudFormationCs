@@ -41,10 +41,10 @@ namespace CloudFormationCs.Resources.EC2
         public Boolean Monitoring { get; set; }
 
         [ScriptIgnore]
-        public NetworkInterfaceAttachment NetworkInterface { set { this.NetworkInterfaces = new NetworkInterfaceAttachment[] { value, }; } }
+        public NetworkInterfaceEmbedded NetworkInterface { set { this.NetworkInterfaces = new NetworkInterfaceEmbedded[] { value, }; } }
 
         [Required(false)]
-        public NetworkInterfaceAttachment[] NetworkInterfaces { get; set; }
+        public NetworkInterfaceEmbedded[] NetworkInterfaces { get; set; }
 
         [Required(false)]
         public String PlacementGroupName { get; set; }

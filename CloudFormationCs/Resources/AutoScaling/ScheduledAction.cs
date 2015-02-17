@@ -2,6 +2,9 @@ using System;
 
 namespace CloudFormationCs.Resources.AutoScaling
 {
+    /// <summary>
+    /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html
+    /// </summary>
     public class ScheduledAction : Resource
     {
         public String AutoScalingGroupName { get; set; }
