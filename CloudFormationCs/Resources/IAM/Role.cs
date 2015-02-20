@@ -21,7 +21,7 @@ namespace CloudFormationCs.Resources.IAM
         {
         }
 
-        public Role(string resourceIdentifier)
+        public Role(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

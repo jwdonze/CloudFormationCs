@@ -18,7 +18,7 @@ namespace CloudFormationCs.Resources.EC2
         {
         }
 
-        public SubnetRouteTableAssociation(string resourceIdentifier)
+        public SubnetRouteTableAssociation(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

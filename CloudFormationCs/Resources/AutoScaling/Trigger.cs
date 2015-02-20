@@ -38,7 +38,7 @@ namespace CloudFormationCs.Resources.AutoScaling
         {
         }
 
-        public Trigger(string resourceIdentifier)
+        public Trigger(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

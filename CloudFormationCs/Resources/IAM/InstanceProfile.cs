@@ -22,7 +22,7 @@ namespace CloudFormationCs.Resources.IAM
         {
         }
 
-        public InstanceProfile(string resourceIdentifier)
+        public InstanceProfile(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

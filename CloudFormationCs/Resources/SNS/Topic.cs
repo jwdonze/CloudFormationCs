@@ -9,7 +9,7 @@ namespace CloudFormationCs.Resources.SNS
         {
         }
 
-        public Topic(string resourceIdentifier)
+        public Topic(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

@@ -26,7 +26,7 @@ namespace CloudFormationCs.Resources.AutoScaling
         {
         }
 
-        public ScheduledAction(string resourceIdentifier)
+        public ScheduledAction(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

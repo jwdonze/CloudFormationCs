@@ -52,7 +52,7 @@ namespace CloudFormationCs.Resources.AutoScaling
         {
         }
 
-        public AutoScalingGroup(string resourceIdentifier)
+        public AutoScalingGroup(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

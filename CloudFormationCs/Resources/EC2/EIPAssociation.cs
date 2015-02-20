@@ -27,7 +27,7 @@ namespace CloudFormationCs.Resources.EC2
         {
         }
 
-        public EIPAssociation(string resourceIdentifier)
+        public EIPAssociation(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

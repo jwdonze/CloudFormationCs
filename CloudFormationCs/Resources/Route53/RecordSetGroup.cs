@@ -24,7 +24,7 @@ namespace CloudFormationCs.Resources.Route53
         {
         }
 
-        public RecordSetGroup(string resourceIdentifier)
+        public RecordSetGroup(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

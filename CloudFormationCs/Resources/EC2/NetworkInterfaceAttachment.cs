@@ -25,7 +25,7 @@ namespace CloudFormationCs.Resources.EC2
         {
         }
 
-        public NetworkInterfaceAttachment(string resourceIdentifier)
+        public NetworkInterfaceAttachment(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

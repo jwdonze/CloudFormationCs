@@ -18,7 +18,7 @@ namespace CloudFormationCs.Resources.EC2
         {
         }
 
-        public VPNGateway(string resourceIdentifier)
+        public VPNGateway(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

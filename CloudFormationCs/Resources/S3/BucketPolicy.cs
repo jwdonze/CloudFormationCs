@@ -18,7 +18,7 @@ namespace CloudFormationCs.Resources.S3
         {
         }
 
-        public BucketPolicy(string resourceIdentifier)
+        public BucketPolicy(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

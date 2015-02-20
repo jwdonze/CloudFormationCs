@@ -18,7 +18,7 @@ namespace CloudFormationCs.Resources.EC2
         {
         }
 
-        public RouteTable(string resourceIdentifier)
+        public RouteTable(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

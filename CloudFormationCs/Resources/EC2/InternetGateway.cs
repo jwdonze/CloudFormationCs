@@ -14,7 +14,7 @@ namespace CloudFormationCs.Resources.EC2
         {
         }
 
-        public InternetGateway(string resourceIdentifier)
+        public InternetGateway(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

@@ -18,7 +18,7 @@ namespace CloudFormationCs.Resources.EC2
         {
         }
 
-        public NetworkAcl(string resourceIdentifier)
+        public NetworkAcl(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

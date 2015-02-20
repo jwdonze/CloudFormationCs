@@ -24,7 +24,7 @@ namespace CloudFormationCs.Resources.EC2
         {
         }
 
-        public Subnet(string resourceIdentifier)
+        public Subnet(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

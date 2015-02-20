@@ -55,7 +55,7 @@ namespace CloudFormationCs.Resources.OpsWorks
         {
         }
 
-        public Layer(string resourceIdentifier)
+        public Layer(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

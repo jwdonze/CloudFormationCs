@@ -30,7 +30,7 @@ namespace CloudFormationCs.Resources.EC2
         {
         }
 
-        public SecurityGroupEgress(string resourceIdentifier)
+        public SecurityGroupEgress(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

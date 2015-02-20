@@ -84,7 +84,7 @@ namespace CloudFormationCs.Resources.RDS
         {
         }
 
-        public DBInstance(string resourceIdentifier)
+        public DBInstance(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

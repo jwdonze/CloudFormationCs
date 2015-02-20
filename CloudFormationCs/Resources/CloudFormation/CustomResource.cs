@@ -10,7 +10,7 @@ namespace CloudFormationCs.Resources.CloudFormation
             throw new NotImplementedException();
         }
 
-        public CustomResource(string resourceIdentifier)
+        public CustomResource(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

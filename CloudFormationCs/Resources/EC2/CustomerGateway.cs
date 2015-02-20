@@ -24,7 +24,7 @@ namespace CloudFormationCs.Resources.EC2
         {
         }
 
-        public CustomerGateway(string resourceIdentifier)
+        public CustomerGateway(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

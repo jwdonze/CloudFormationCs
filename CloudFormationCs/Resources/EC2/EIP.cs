@@ -22,11 +22,11 @@ namespace CloudFormationCs.Resources.EC2
 
         public EIP() : base() { }
 
-        public EIP(string resourceIdentifier)
+        public EIP(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }
-        public EIP(string resourceIdentifier, Domains domain)
+        public EIP(StringOrEnum resourceIdentifier, Domains domain)
             : base(resourceIdentifier)
         {
             this.Domain = domain;

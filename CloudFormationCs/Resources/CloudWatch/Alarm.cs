@@ -63,7 +63,7 @@ namespace CloudFormationCs.Resources.CloudWatch
         {
         }
 
-        public Alarm(string resourceIdentifier)
+        public Alarm(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

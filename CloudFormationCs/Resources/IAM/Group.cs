@@ -18,7 +18,7 @@ namespace CloudFormationCs.Resources.IAM
         {
         }
 
-        public Group(string resourceIdentifier)
+        public Group(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

@@ -19,7 +19,7 @@ namespace CloudFormationCs
         {
         }
 
-        public Resource(string resourceIdentifier)
+        public Resource(StringOrEnum resourceIdentifier)
         {
             this.ResourceIdentifier = resourceIdentifier;
         }

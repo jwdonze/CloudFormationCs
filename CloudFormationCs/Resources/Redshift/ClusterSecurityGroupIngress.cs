@@ -24,7 +24,7 @@ namespace CloudFormationCs.Resources.Redshift
         {
         }
 
-        public ClusterSecurityGroupIngress(string resourceIdentifier)
+        public ClusterSecurityGroupIngress(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

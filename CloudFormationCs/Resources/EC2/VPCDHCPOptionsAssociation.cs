@@ -18,7 +18,7 @@ namespace CloudFormationCs.Resources.EC2
         {
         }
 
-        public VPCDHCPOptionsAssociation(string resourceIdentifier)
+        public VPCDHCPOptionsAssociation(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

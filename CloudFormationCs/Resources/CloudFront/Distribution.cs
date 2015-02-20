@@ -11,7 +11,7 @@ namespace CloudFormationCs.Resources.CloudFront
         {
         }
 
-        public Distribution(string resourceIdentifier)
+        public Distribution(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

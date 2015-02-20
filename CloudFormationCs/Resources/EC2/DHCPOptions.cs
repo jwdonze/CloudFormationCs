@@ -30,7 +30,7 @@ namespace CloudFormationCs.Resources.EC2
         {
         }
 
-        public DHCPOptions(string resourceIdentifier)
+        public DHCPOptions(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

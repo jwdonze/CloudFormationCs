@@ -21,7 +21,7 @@ namespace CloudFormationCs.Resources.ElastiCache
         {
         }
 
-        public SecurityGroupIngress(string resourceIdentifier)
+        public SecurityGroupIngress(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

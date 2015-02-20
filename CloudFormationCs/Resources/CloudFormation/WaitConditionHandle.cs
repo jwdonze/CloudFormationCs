@@ -9,7 +9,7 @@ namespace CloudFormationCs.Resources.CloudFormation
         {
         }
 
-        public WaitConditionHandle(string resourceIdentifier)
+        public WaitConditionHandle(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

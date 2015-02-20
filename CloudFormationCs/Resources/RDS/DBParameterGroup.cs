@@ -34,7 +34,7 @@ namespace CloudFormationCs.Resources.RDS
         {
         }
 
-        public DBParameterGroup(string resourceIdentifier)
+        public DBParameterGroup(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

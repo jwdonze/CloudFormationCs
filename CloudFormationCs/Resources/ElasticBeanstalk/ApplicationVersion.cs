@@ -21,7 +21,7 @@ namespace CloudFormationCs.Resources.ElasticBeanstalk
         {
         }
 
-        public ApplicationVersion(string resourceIdentifier)
+        public ApplicationVersion(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

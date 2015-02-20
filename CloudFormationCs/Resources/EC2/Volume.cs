@@ -31,7 +31,7 @@ namespace CloudFormationCs.Resources.EC2
         {
         }
 
-        public Volume(string resourceIdentifier)
+        public Volume(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

@@ -9,7 +9,7 @@ namespace CloudFormationCs.Resources.SDB
         {
         }
 
-        public Domain(string resourceIdentifier)
+        public Domain(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

@@ -12,6 +12,6 @@ namespace CloudFormationCs.Resources.CloudFormation
 
         public Init() : base() { }
 
-        public Init(string resourceIdentifier) : base(resourceIdentifier) { }
+        public Init(StringOrEnum resourceIdentifier) : base(resourceIdentifier) { }
     }
 }

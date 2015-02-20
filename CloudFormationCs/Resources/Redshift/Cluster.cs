@@ -84,7 +84,7 @@ namespace CloudFormationCs.Resources.Redshift
         {
         }
 
-        public Cluster(string resourceIdentifier)
+        public Cluster(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

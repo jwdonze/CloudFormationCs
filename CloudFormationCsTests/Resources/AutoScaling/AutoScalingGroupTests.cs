@@ -88,7 +88,7 @@ namespace CloudFormationCsTests.Resources.AutoScalingTests
                         ""Type"" : ""AWS::AutoScaling::AutoScalingGroup"",
                         ""Properties"" : 
                         {
-                            ""AvailabilityZones"" : { ""Fn::GetAZs"" : """"},
+                            ""AvailabilityZones"" : [ { ""Fn::GetAZs"" : """"} ],
                             ""LaunchConfigurationName"" : { ""Ref"" : ""SimpleConfig"" },
                             ""MinSize"" : ""1"",
                             ""MaxSize"" : ""3"",

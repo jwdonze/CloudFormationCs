@@ -62,7 +62,7 @@ namespace CloudFormationCs.Resources.ElasticLoadBalancing
         {
         }
 
-        public LoadBalancer(string resourceIdentifier)
+        public LoadBalancer(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

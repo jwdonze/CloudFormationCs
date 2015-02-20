@@ -6,7 +6,7 @@ namespace CloudFormationCs
     {
         public Ref() { }
 
-        public Ref(string name)
+        public Ref(StringOrEnum name)
         {
             this._name = name;
         }

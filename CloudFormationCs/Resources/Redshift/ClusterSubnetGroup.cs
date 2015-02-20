@@ -18,7 +18,7 @@ namespace CloudFormationCs.Resources.Redshift
         {
         }
 
-        public ClusterSubnetGroup(string resourceIdentifier)
+        public ClusterSubnetGroup(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

@@ -10,7 +10,7 @@ namespace CloudFormationCs.Resources.CloudFormation
             throw new NotImplementedException();
         }
 
-        public Authentication(string resourceIdentifier)
+        public Authentication(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

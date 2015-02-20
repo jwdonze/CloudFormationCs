@@ -20,7 +20,7 @@ namespace CloudFormationCs.Resources.AutoScaling
         {
         }
 
-        public ScalingPolicy(string resourceIdentifier)
+        public ScalingPolicy(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

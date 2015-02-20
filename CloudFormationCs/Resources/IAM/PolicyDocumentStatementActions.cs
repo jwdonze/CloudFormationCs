@@ -857,5 +857,7 @@ namespace CloudFormationCs.Resources.IAM
 
         sqs_STAR,
         sns_STAR,
+        iam_GetUser,
+        iam_CreateAccessKey,
     }
 }

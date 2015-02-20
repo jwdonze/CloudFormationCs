@@ -12,7 +12,7 @@ namespace CloudFormationCs.Resources.SQS
         {
         }
 
-        public Queue(string resourceIdentifier)
+        public Queue(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

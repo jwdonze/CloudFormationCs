@@ -27,7 +27,7 @@ namespace CloudFormationCs.Resources.EC2
         {
         }
 
-        public VPC(string resourceIdentifier)
+        public VPC(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

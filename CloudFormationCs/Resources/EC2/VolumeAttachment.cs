@@ -21,7 +21,7 @@ namespace CloudFormationCs.Resources.EC2
         {
         }
 
-        public VolumeAttachment(string resourceIdentifier)
+        public VolumeAttachment(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

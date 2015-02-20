@@ -17,7 +17,7 @@ namespace CloudFormationCs.Resources.CloudFormation
         {
         }
 
-        public Stack(string resourceIdentifier)
+        public Stack(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

@@ -90,7 +90,7 @@ namespace CloudFormationCs.Resources.EC2
         {
         }
 
-        public Instance(string resourceIdentifier)
+        public Instance(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

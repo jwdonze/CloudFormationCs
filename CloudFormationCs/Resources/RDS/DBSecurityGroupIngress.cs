@@ -21,7 +21,7 @@ namespace CloudFormationCs.Resources.RDS
         {
         }
 
-        public DBSecurityGroupIngress(string resourceIdentifier)
+        public DBSecurityGroupIngress(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

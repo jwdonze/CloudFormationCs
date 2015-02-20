@@ -18,7 +18,7 @@ namespace CloudFormationCs.Resources.EC2
         {
         }
 
-        public VPNConnectionRoute(string resourceIdentifier)
+        public VPNConnectionRoute(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

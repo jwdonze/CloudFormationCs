@@ -45,7 +45,7 @@ namespace CloudFormationCs.Resources.OpsWorks
         {
         }
 
-        public Instance(string resourceIdentifier)
+        public Instance(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

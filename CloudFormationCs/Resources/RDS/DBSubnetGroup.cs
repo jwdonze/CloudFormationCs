@@ -21,7 +21,7 @@ namespace CloudFormationCs.Resources.RDS
         {
         }
 
-        public DBSubnetGroup(string resourceIdentifier)
+        public DBSubnetGroup(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

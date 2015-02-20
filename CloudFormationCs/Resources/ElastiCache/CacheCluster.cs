@@ -57,7 +57,7 @@ namespace CloudFormationCs.Resources.ElastiCache
         {
         }
 
-        public CacheCluster(string resourceIdentifier)
+        public CacheCluster(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

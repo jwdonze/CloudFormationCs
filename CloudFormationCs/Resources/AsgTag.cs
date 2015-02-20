@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CloudFormationCs.Resources
+namespace CloudFormationCs
 {
     /// <summary>
     /// Tag for AutoScalingGroup

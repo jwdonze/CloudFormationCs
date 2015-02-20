@@ -32,7 +32,7 @@ namespace CloudFormationCs.Resources.DynamoDB
         {
         }
 
-        public Table(string resourceIdentifier)
+        public Table(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

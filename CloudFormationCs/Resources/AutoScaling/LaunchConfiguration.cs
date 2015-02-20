@@ -45,7 +45,7 @@ namespace CloudFormationCs.Resources.AutoScaling
         {
         }
 
-        public LaunchConfiguration(string resourceIdentifier)
+        public LaunchConfiguration(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

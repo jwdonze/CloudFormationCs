@@ -15,7 +15,7 @@ namespace CloudFormationCs.Resources.ElastiCache
         {
         }
 
-        public SecurityGroup(string resourceIdentifier)
+        public SecurityGroup(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

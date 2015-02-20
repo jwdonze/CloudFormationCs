@@ -21,7 +21,7 @@ namespace CloudFormationCs.Resources.EC2
         {
         }
 
-        public VPCGatewayAttachment(string resourceIdentifier)
+        public VPCGatewayAttachment(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

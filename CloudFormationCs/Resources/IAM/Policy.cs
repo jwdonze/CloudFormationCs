@@ -29,7 +29,7 @@ namespace CloudFormationCs.Resources.IAM
         {
         }
 
-        public Policy(string resourceIdentifier)
+        public Policy(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

@@ -27,7 +27,7 @@ namespace CloudFormationCs.Resources.EC2
         {
         }
 
-        public SecurityGroup(string resourceIdentifier)
+        public SecurityGroup(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

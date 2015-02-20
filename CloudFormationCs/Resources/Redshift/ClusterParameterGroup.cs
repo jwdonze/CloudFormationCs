@@ -21,7 +21,7 @@ namespace CloudFormationCs.Resources.Redshift
         {
         }
 
-        public ClusterParameterGroup(string resourceIdentifier)
+        public ClusterParameterGroup(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

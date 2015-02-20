@@ -18,7 +18,7 @@ namespace CloudFormationCs.Resources.OpsWorks
         {
         }
 
-        public ElasticLoadBalancerAttachment(string resourceIdentifier)
+        public ElasticLoadBalancerAttachment(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

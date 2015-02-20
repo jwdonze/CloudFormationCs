@@ -31,7 +31,7 @@ namespace CloudFormationCs.Resources.SNS
         {
         }
 
-        public TopicPolicy(string resourceIdentifier)
+        public TopicPolicy(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

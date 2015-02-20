@@ -9,7 +9,7 @@ namespace CloudFormationCs.Resources.SQS
         {
         }
 
-        public QueuePolicy(string resourceIdentifier)
+        public QueuePolicy(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

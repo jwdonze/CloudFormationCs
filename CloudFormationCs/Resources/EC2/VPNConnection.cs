@@ -24,7 +24,8 @@ namespace CloudFormationCs.Resources.EC2
 		public VPNConnection () : base()
 		{
 		}
-		public VPNConnection(string resourceIdentifier) : base (resourceIdentifier)
+        public VPNConnection(StringOrEnum resourceIdentifier)
+            : base(resourceIdentifier)
 		{
 		}
 	}

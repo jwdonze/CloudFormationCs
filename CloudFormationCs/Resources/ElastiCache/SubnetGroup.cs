@@ -18,7 +18,7 @@ namespace CloudFormationCs.Resources.ElastiCache
         {
         }
 
-        public SubnetGroup(string resourceIdentifier)
+        public SubnetGroup(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }

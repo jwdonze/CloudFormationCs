@@ -149,6 +149,7 @@
     <Compile Include="Entity\MountPoint.cs" />
     <Compile Include="Entity\PrivateIpAddressSpecification.cs" />
     <Compile Include="Entity\JSON.cs" />
+    <Compile Include="StringOrEnum.cs" />
     <Compile Include="Template.cs" />
     <Compile Include="Entity\Ebs.cs" />
     <Compile Include="Attributes\EmitAsStringAttribute.cs" />

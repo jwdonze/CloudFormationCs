@@ -30,7 +30,7 @@ namespace CloudFormationCs.Resources.ElasticBeanstalk
         {
         }
 
-        public ConfigurationTemplate(string resourceIdentifier)
+        public ConfigurationTemplate(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
         }
