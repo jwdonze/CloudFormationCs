@@ -820,12 +820,58 @@ namespace CloudFormationCs.Resources.IAM
         elasticloadbalancing_SetLoadBalancerPoliciesOfListener,
         #endregion
         #region S3
+
+        // http://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html
+
         s3_STAR,
         s3_GetSTAR,
         s3_ListSTAR,
+
         s3_GetObject,
+        s3_GetObjectVersion,
         s3_PutObject,
+        s3_GetObjectAcl,
+        s3_GetObjectVersionAcl,
         s3_PutObjectAcl,
+        s3_PutObjectVersionAcl,
+        s3_DeleteObject,
+        s3_DeleteObjectVersion,
+        s3_ListMultipartUploadParts,
+        s3_AbortMultipartUpload,
+        s3_GetObjectTorrent,
+        s3_GetObjectVersionTorrent,
+        s3_RestoreObject,
+        s3_CreateBucket,
+        s3_DeleteBucket,
+        s3_ListBucket,
+        s3_ListBucketVersions,
+        s3_ListAllMyBuckets,
+        s3_ListBucketMultipartUploads,
+        s3_GetBucketAcl,
+        s3_PutBucketAcl,
+        s3_GetBucketCORS,
+        s3_PutBucketCORS,
+        s3_GetBucketVersioning,
+        s3_PutBucketVersioning,
+        s3_GetBucketRequestPayment,
+        s3_PutBucketRequestPayment,
+        s3_GetBucketLocation,
+        s3_GetBucketPolicy,
+        s3_DeleteBucketPolicy,
+        s3_PutBucketPolicy,
+        s3_GetBucketNotification,
+        s3_PutBucketNotification,
+        s3_GetBucketLogging,
+        s3_PutBucketLogging,
+        s3_GetBucketTagging ,
+        s3_PutBucketTagging ,
+        s3_GetBucketWebsite,
+        s3_PutBucketWebsite,
+        s3_DeleteBucketWebsite,
+        s3_GetLifecycleConfiguration,
+        s3_PutLifecycleConfiguration,
+
+
         #endregion
 
         cloudformation_DescribeStackResource,

@@ -13,7 +13,7 @@ namespace CloudFormationCs.Resources.IAM
         public PolicyDocument PolicyDocument { get; set; }
 
         [Required(true)]
-        public String PolicyName { get; set; }
+        public StringRef PolicyName { get; set; }
 
         [Required(false)]
         public StringRef[] Roles { get; set; }
