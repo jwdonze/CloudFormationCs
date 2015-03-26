@@ -23,7 +23,7 @@ namespace CloudFormationCs.Resources.EC2
         public Boolean EbsOptimized { get; set; }
 
         [Required(false)]
-        public String IamInstanceProfile { get; set; }
+        public StringRef IamInstanceProfile { get; set; }
 
         [Required(true)]
         public StringRef ImageId { get; set; }
