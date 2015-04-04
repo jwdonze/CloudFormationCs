@@ -96,6 +96,7 @@
     <Compile Include="Resources\EC2\VPC.cs" />
     <Compile Include="Resources\EC2\VPCDHCPOptionsAssociation.cs" />
     <Compile Include="Resources\EC2\VPCGatewayAttachment.cs" />
+    <Compile Include="Resources\EC2\VPCPeeringConnection.cs" />
     <Compile Include="Resources\EC2\VPNConnection.cs" />
     <Compile Include="Resources\EC2\VPNConnectionRoute.cs" />
     <Compile Include="Resources\EC2\VPNGateway.cs" />

@@ -22,6 +22,9 @@ namespace CloudFormationCs.Resources.EC2
         [Required(true)]
         public StringRef RouteTableId { get; set; }
 
+        [Required(false)]
+        public StringRef VpcPeeringConnectionId { get; set; }
+
         public Route()
             : base()
         {
