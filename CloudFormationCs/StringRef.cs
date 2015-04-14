@@ -93,6 +93,11 @@ namespace CloudFormationCs
             return new StringRef(d);
         }
 
+        public static implicit operator StringRef(InstanceTypes d)
+        {
+            return new StringRef(CfnHelpers.GetInstnaceName(d));
+        }
+
         public static implicit operator StringRef(Fn__GetAtt d)
         {
             return new StringRef(d);
