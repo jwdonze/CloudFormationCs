@@ -17,6 +17,9 @@ namespace CloudFormationCs.Resources.IAM
         /// Everything
         /// </summary>
         STAR,
+        #region DYNAMODB
+        dynamodb_STAR,
+        #endregion
         #region CLOUDFORMATION
         CloudFormation_DescribeStackResource,
         #endregion
