@@ -12,18 +12,68 @@ namespace CloudFormationCs.Resources.IAM
     [EmitAsStringAttribute(typeof(ActionsFormatter))]
     public enum PolicyDocumentStatementActions
     {
-        Undefined,
         /// <summary>
         /// Everything
         /// </summary>
         STAR,
+<<<<<<< Upstream, based on origin/master
         #region DYNAMODB
         dynamodb_STAR,
         #endregion
         #region CLOUDFORMATION
         CloudFormation_DescribeStackResource,
+=======
+        #region autoscaling
+        autoscaling_STAR,
+        autoscaling_DescribeSTAR,
+>>>>>>> 0919d8f - Add Policy Statement Actions - Add NotAction to Statement - Add Undefined to KeyType
         #endregion
+
+        #region CLOUDFORMATION
+        cloudFormation_STAR,
+        cloudformation_DescribeStacks,
+        cloudformation_DescribeStackResource,
+        CloudFormation_DescribeStackResource,
+        cloudformation_DescribeStackEvents,
+        cloudformation_DescribeStackResources,
+        cloudformation_GetTemplate,
+        #endregion
+
+        #region cloudfront
+        cloudfront_GetSTAR,
+        cloudfront_ListSTAR,
+        #endregion
+
+        #region cloudwatch
+        cloudwatch_STAR,
+        cloudwatch_DeleteAlarms,
+        cloudwatch_DescribeAlarmHistory,
+        cloudwatch_DescribeAlarms,
+        cloudwatch_DescribeAlarmsForMetric,
+        cloudwatch_DescribeSTAR,
+        cloudwatch_ListSTAR,
+        cloudwatch_ListMetrics,
+        cloudwatch_GetSTAR,
+        cloudwatch_GetMetricStatistics,
+        cloudwatch_PutMetricAlarm,
+        #endregion
+
+        #region directconnect
+        directconnect_DescribeSTAR,
+        #endregion
+
+        #region dynamodb
+        dynamodb_STAR,
+        dynamodb_GetItem,
+        dynamodb_BatchGetItem,
+        dynamodb_Query,
+        dynamodb_Scan,Undefined,
+        dynamodb_DescribeTable,
+        dynamodb_ListTables,
+        #endregion
+
         #region EC2
+        ec2_STAR,
         ec2_DescribeSTAR,
 
         ///<summary>
@@ -791,6 +841,20 @@ namespace CloudFormationCs.Resources.IAM
         ///</summary>
         ec2_UnmonitorInstances,
         #endregion EC2
+
+        #region elasticache
+        elasticache_DescribeSTAR,
+        #endregion
+
+        #region ElasticBeanstalk
+        elasticbeanstalk_STAR,
+        elasticbeanstalk_CheckSTAR,
+        elasticbeanstalk_DescribeSTAR,
+        elasticbeanstalk_ListSTAR,
+        elasticbeanstalk_RequestEnvironmentInfo,
+        elasticbeanstalk_RetrieveEnvironmentInfo,
+        #endregion
+
         #region ELB
         elasticloadbalancing_STAR,
         elasticloadbalancing_AddTags,
@@ -806,6 +870,7 @@ namespace CloudFormationCs.Resources.IAM
         elasticloadbalancing_DeleteLoadBalancerListeners,
         elasticloadbalancing_DeleteLoadBalancerPolicy,
         elasticloadbalancing_DeregisterInstancesFromLoadBalancer,
+        elasticloadbalancing_DescribeSTAR,
         elasticloadbalancing_DescribeInstanceHealth,
         elasticloadbalancing_DescribeLoadBalancerAttributes,
         elasticloadbalancing_DescribeLoadBalancerPolicies,
@@ -822,6 +887,20 @@ namespace CloudFormationCs.Resources.IAM
         elasticloadbalancing_SetLoadBalancerPoliciesForBackendServer,
         elasticloadbalancing_SetLoadBalancerPoliciesOfListener,
         #endregion
+
+        #region elastictranscoder
+        elastictranscoder_ReadSTAR,
+        elastictranscoder_ListSTAR,
+        #endregion
+
+        #region IAM
+        iam_STAR,
+        iam_GetUser,
+        iam_CreateAccessKey,
+        iam_ListSTAR,
+        iam_GetSTAR,
+        #endregion
+
         #region S3
 
         // http://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html
@@ -874,13 +953,27 @@ namespace CloudFormationCs.Resources.IAM
         s3_GetLifecycleConfiguration,
         s3_PutLifecycleConfiguration,
 
-
         #endregion
 
-        cloudformation_DescribeStackResource,
+        #region Route 53
+        route53_STAR,
+        route53_ChangeResourceRecordSets,
+        route53_ListResourceRecordSets,
+        route53_GetSTAR,
+        route53_GetChange,
+        route53_GetGeoLocation,
+        route53_GetHostedZone,
+        route53_ListSTAR,
+        route53_ListGeoLocations,
+        route53_ListHostedZones,
+        route53_CreateHostedZone,
+        route53_DeleteHostedZone,
+        #endregion
 
-        sns_Publish,
+        sts_AssumeRole,
 
+        #region SQS
+        sqs_STAR,
         sqs_SendMessage,
         sqs_ReceiveMessage,
         sqs_ChangeMessageVisibility,
@@ -890,23 +983,50 @@ namespace CloudFormationCs.Resources.IAM
         sqs_CreateQueue,
         sqs_DeleteQueue,
         sqs_ListQueues,
+        #endregion
 
-        route53_STAR,
-        route53_ChangeResourceRecordSets,
-        route53_ListResourceRecordSets,
-        route53_GetChange,
-        route53_GetGeoLocation,
-        route53_GetHostedZone,
-        route53_ListGeoLocations,
-        route53_ListHostedZones,
-        route53_CreateHostedZone,
-        route53_DeleteHostedZone,
-
-        sts_AssumeRole,
-
-        sqs_STAR,
+        #region SNS
         sns_STAR,
-        iam_GetUser,
-        iam_CreateAccessKey,
+        sns_CreateTopic,
+        sns_ListSubscriptionsByTopic,
+        sns_ListTopics,
+        sns_Publish,
+        sns_Subscribe,
+        sns_Unsubscribe,
+        sns_GetSTAR,
+        sns_ListSTAR,
+        #endregion
+
+
+
+
+
+
+
+
+
+        redshift_DescribeSTAR,
+        redshift_ViewQueriesInConsole,
+
+        #region RDS
+        rds_STAR,
+        rds_DescribeSTAR,
+        rds_ListTagsForResource,
+        #endregion
+
+        #region SDB
+        sdb_GetAttributes,
+        sdb_ListSTAR,
+        sdb_SelectSTAR,
+        #endregion
+
+        #region SES
+        ses_GetSTAR,
+        ses_ListSTAR,
+        #endregion
+
+        storagegateway_ListSTAR,
+        storagegateway_DescribeSTAR,
+
     }
 }

@@ -14,6 +14,7 @@ namespace CloudFormationCs.Resources.IAM
         public Effects Effect { get; set; }
 
         public PolicyDocumentStatementActions[] Action { get; set; }
+        public PolicyDocumentStatementActions[] NotAction { get; set; }
 
         public Principal Principal { get; set; }
 

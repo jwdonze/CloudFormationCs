@@ -3,8 +3,6 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{E123AF0B-2762-4444-A731-A25C5C496A2F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>CloudFormationCs</RootNamespace>
