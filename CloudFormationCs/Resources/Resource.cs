@@ -3,6 +3,16 @@ using System.Web.Script.Serialization;
 
 namespace CloudFormationCs
 {
+    internal class ResourcePropertyContainer
+    {
+        public string ResourceIdentifier { get; private set; }
+        public string Version { get; set; }
+        public Resource Properties { get; set; }
+        public string Type { get; set; }
+        [CompressSingleArray]
+        public string[] DependsOn { get; set; }
+        public Resources.EC2.Metadata Metadata { get; set; }
+    }
     public class Resource
     {
         [ScriptIgnore]
@@ -12,8 +22,7 @@ namespace CloudFormationCs
         public string Version { get; set; }
 
         [NonProperty]
-#warning "WARNING: TODO: convert to array of strings or single string"
-        public String DependsOn { get; set; }
+        public string[] DependsOn { get; set; }
 
         public Resource()
         {

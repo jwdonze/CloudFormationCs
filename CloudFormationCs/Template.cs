@@ -56,29 +56,17 @@ namespace CloudFormationCs
                 var ht2 = new Hashtable();
                 foreach (var res in this.Resources)
                 {
-                    var ht3 = new Hashtable()
+                    var ht3 = new ResourcePropertyContainer()
                     {
-                        { "Type", CfnHelpers.GetNameFull(res) },
+                        Type = CfnHelpers.GetNameFull(res),
+                        Version = res.Version,
+                        DependsOn = res.DependsOn,
+                        Properties = res,
                     };
-                    if (!string.IsNullOrWhiteSpace(res.Version))
+                    Resources.EC2.Instance ints = res as Resources.EC2.Instance;
+                    if (ints != null)
                     {
-                        ht3.Add("Version", res.Version);
-                    }
-                    foreach (var prop in res.GetType().GetProperties())
-                    {
-                        if (prop.IsDefined(typeof(NonPropertyAttribute), true))
-                        {
-                            object value = prop.GetValue(res, BindingFlags.Public, null, null, null);
-                            if (value != null)
-                            {
-                                ht3.Add(prop.Name, value);
-                            }
-                        }
-                    }
-
-                    if (!(res is Resources.CloudFormation.WaitConditionHandle))
-                    {
-                        ht3.Add("Properties", res);
+                        ht3.Metadata = ints.Metadata;
                     }
                     ht2.Add(res.ResourceIdentifier, ht3);
                 }
@@ -107,6 +95,7 @@ namespace CloudFormationCs
                     Console.WriteLine();
                     Console.WriteLine("============== Serialize " + obj.GetType().FullName);
                 }
+
                 var outputDictionary = new Dictionary<string, object>();
                 object defValues;
                 try
@@ -139,14 +128,15 @@ namespace CloudFormationCs
                 {
                     bool ignoreProp1 = prop.IsDefined(typeof(ScriptIgnoreAttribute), true)
                         || prop.IsDefined(typeof(NonPropertyAttribute), true)
-                        || !prop.CanRead;
+                         || !prop.CanRead;
 
+                    if (verbosity > 0)
+                    {
+                        Console.WriteLine("Prop: " + obj.GetType().FullName + "::" + prop.Name + " ignore: " + ignoreProp1);
+                        Console.WriteLine("  " + prop.IsDefined(typeof(ScriptIgnoreAttribute), true) + " || " + prop.IsDefined(typeof(NonPropertyAttribute), true) + " || " + !prop.CanRead);
+                    }
                     if (!ignoreProp1)
                     {
-                        if (verbosity > 0)
-                        {
-                            Console.WriteLine("Prop: " + obj.GetType().FullName + "::" + prop.Name);
-                        }
                         object defValue = prop.GetValue(defValues, BindingFlags.Public, null, null, null);
                         object value = prop.GetValue(obj, BindingFlags.Public, null, null, null);
                         var propName = prop.Name;
@@ -207,7 +197,10 @@ namespace CloudFormationCs
                                 || emitNulls.Length > 0
                             )
                         {
-
+                            if (verbosity > 0)
+                            {
+                                Console.WriteLine("  - emit");
+                            }
                             if (value != null && (emitAsStringAttr != null))
                             {
                                 if (value is Boolean)
@@ -235,6 +228,13 @@ namespace CloudFormationCs
                                     value = value.ToString();
                                 }
                                 outputDictionary.Add(propName, value);
+                            }
+                        }
+                        else
+                        {
+                            if (verbosity > 0)
+                            {
+                                Console.WriteLine("  - skip");
                             }
                         }
                     }
