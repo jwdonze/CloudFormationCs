@@ -16,17 +16,10 @@ namespace CloudFormationCs.Resources.IAM
         /// Everything
         /// </summary>
         STAR,
-<<<<<<< Upstream, based on origin/master
-        #region DYNAMODB
-        dynamodb_STAR,
-        #endregion
-        #region CLOUDFORMATION
-        CloudFormation_DescribeStackResource,
-=======
-        #region autoscaling
+
+        #region AUTOSCALING
         autoscaling_STAR,
         autoscaling_DescribeSTAR,
->>>>>>> 0919d8f - Add Policy Statement Actions - Add NotAction to Statement - Add Undefined to KeyType
         #endregion
 
         #region CLOUDFORMATION
@@ -39,12 +32,12 @@ namespace CloudFormationCs.Resources.IAM
         cloudformation_GetTemplate,
         #endregion
 
-        #region cloudfront
+        #region CLOUDFRONT
         cloudfront_GetSTAR,
         cloudfront_ListSTAR,
         #endregion
 
-        #region cloudwatch
+        #region CLOUDWATCH
         cloudwatch_STAR,
         cloudwatch_DeleteAlarms,
         cloudwatch_DescribeAlarmHistory,
@@ -58,11 +51,11 @@ namespace CloudFormationCs.Resources.IAM
         cloudwatch_PutMetricAlarm,
         #endregion
 
-        #region directconnect
+        #region DIRECTCONNECT
         directconnect_DescribeSTAR,
         #endregion
 
-        #region dynamodb
+        #region DYNAMODB
         dynamodb_STAR,
         dynamodb_GetItem,
         dynamodb_BatchGetItem,
