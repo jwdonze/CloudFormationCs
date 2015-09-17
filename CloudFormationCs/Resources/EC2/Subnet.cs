@@ -16,6 +16,9 @@ namespace CloudFormationCs.Resources.EC2
         [Required(false)]
         public Tag[] Tags { get; set; }
 
+        [Required(false)]
+        public bool MapPublicIpOnLaunch { get; set; }
+
         [Required(true)]
         public Ref VpcId { get; set; }
 
