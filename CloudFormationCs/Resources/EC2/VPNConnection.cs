@@ -10,7 +10,7 @@ namespace CloudFormationCs.Resources.EC2
 		public String Type { get; set; }
 		
 		[Required(true)]
-		public String CustomerGatewayId { get; set; }
+		public StringRef CustomerGatewayId { get; set; }
 		
 		[Required(RequiredAttribute.RequirementTypes.Conditional)]
 		public Boolean StaticRoutesOnly { get; set; }
@@ -19,7 +19,7 @@ namespace CloudFormationCs.Resources.EC2
         public Tag[] Tags { get; set; }
 		
 		[Required(true)]
-		public String VpnGatewayId { get; set; }
+		public StringRef VpnGatewayId { get; set; }
 
 		public VPNConnection () : base()
 		{

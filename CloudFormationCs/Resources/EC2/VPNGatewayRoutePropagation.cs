@@ -8,10 +8,10 @@ namespace CloudFormationCs.Resources.EC2
     public class VPNGatewayRoutePropagation : Resource
     {
         [Required(false)]
-        public String[] RouteTableIds { get; set; }
+        public StringRef[] RouteTableIds { get; set; }
 
         [Required(true)]
-        public String VpnGatewayId { get; set; }
+        public StringRef VpnGatewayId { get; set; }
 
         public VPNGatewayRoutePropagation()
             : base()

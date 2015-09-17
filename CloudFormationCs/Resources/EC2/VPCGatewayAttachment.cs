@@ -14,7 +14,7 @@ namespace CloudFormationCs.Resources.EC2
         public StringRef VpcId { get; set; }
 
         [Required(RequiredAttribute.RequirementTypes.Conditional)]
-        public String VpnGatewayId { get; set; }
+        public StringRef VpnGatewayId { get; set; }
 
         public VPCGatewayAttachment()
             : base()
