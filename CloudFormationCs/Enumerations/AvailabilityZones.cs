@@ -7,6 +7,7 @@ namespace CloudFormationCs
         Undefined,
         us_west_1a,
         us_west_1b,
+        us_west_1c,
         us_west_2a,
         us_west_2b,
         us_west_2c,
