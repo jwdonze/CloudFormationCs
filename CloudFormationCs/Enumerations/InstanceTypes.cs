@@ -10,6 +10,10 @@ namespace CloudFormationCs
         Undefined,
 
         /// <summary>
+        /// 1 CPU, .6 GiB RAM, EBS Only, Low to Moderate Net
+        /// </summary>
+        t2_nano,
+        /// <summary>
         /// 1 CPU, 1 GiB RAM, EBS Only, Low to Moderate Net
         /// </summary>
         t2_micro,
