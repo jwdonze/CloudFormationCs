@@ -30,6 +30,7 @@ namespace CloudFormationCs.Resources.IAM
         cloudformation_DescribeStackEvents,
         cloudformation_DescribeStackResources,
         cloudformation_GetTemplate,
+        cloudformation_UpdateStack,
         #endregion
 
         #region CLOUDFRONT
