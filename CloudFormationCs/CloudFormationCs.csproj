@@ -72,6 +72,7 @@
     <Compile Include="Resources\DynamoDB\Table.cs" />
     <Compile Include="Resources\EC2\CustomerGateway.cs" />
     <Compile Include="Resources\EC2\DHCPOptions.cs" />
+    <Compile Include="Resources\EC2\NatGateway.cs" />
     <Compile Include="Resources\EC2\EIP.cs" />
     <Compile Include="Resources\EC2\EIPAssociation.cs" />
     <Compile Include="Resources\EC2\Instance.cs" />

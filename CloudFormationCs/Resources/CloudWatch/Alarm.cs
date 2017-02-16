@@ -9,10 +9,13 @@ namespace CloudFormationCs.Resources.CloudWatch
     public class Alarm : Resource
     {
         [Required(false)]
-        public String ActionsEnabled { get; set; }
+        public Boolean ActionsEnabled { get; set; }
 
         [Required(false)]
         public StringRef[] AlarmActions { get; set; }
+
+        [Required(false)]
+        public StringRef AlarmActions1 { set { this.AlarmActions = new StringRef[] { value }; } }
 
         [Required(false)]
         public String AlarmDescription { get; set; }

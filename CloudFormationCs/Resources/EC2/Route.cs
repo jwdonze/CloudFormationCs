@@ -19,6 +19,9 @@ namespace CloudFormationCs.Resources.EC2
         [Required(RequiredAttribute.RequirementTypes.Conditional)]
         public StringRef NetworkInterfaceId { get; set; }
 
+        [Required(RequiredAttribute.RequirementTypes.Conditional)]
+        public StringRef NatGatewayId { get; set; }
+
         [Required(true)]
         public StringRef RouteTableId { get; set; }
 

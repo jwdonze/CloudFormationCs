@@ -2,6 +2,9 @@ using System;
 
 namespace CloudFormationCs.Entity
 {
+    /// <summary>
+    /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-blockdev-mapping.html
+    /// </summary>
     public class BlockDeviceMapping
     {
         public String DeviceName { get; set; }
