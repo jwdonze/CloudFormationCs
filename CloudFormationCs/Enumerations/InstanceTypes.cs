@@ -29,6 +29,14 @@ namespace CloudFormationCs
         /// 2 CPU, 8 GiB RAM, EBS Only, Low to Moderate Net
         /// </summary>
         t2_large,
+        /// <summary>
+        /// 4 CPU, 16 GiB RAM, EBS Only, Low to Moderate Net
+        /// </summary>
+        t2_xlarge,
+        /// <summary>
+        /// 8 CPU, 32 GiB RAM, EBS Only, Low to Moderate Net
+        /// </summary>
+        t2_2xlarge,
 
 
 
