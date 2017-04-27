@@ -20,7 +20,7 @@ namespace CloudFormationCs.Resources.ElastiCache
         public String[] CacheSecurityGroupNames { get; set; }
 
         [Required(false)]
-        public String CacheSubnetGroupName { get; set; }
+        public StringRef CacheSubnetGroupName { get; set; }
 
         [Required(false)]
         public String ClusterName { get; set; }

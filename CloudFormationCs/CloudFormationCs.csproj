@@ -101,7 +101,9 @@
     <Compile Include="Resources\EC2\VPNGateway.cs" />
     <Compile Include="Resources\EC2\VPNGatewayRoutePropagation.cs" />
     <Compile Include="Resources\ElastiCache\CacheCluster.cs" />
+    <Compile Include="Resources\ElastiCache\NodeGroupConfiguration.cs" />
     <Compile Include="Resources\ElastiCache\ParameterGroup.cs" />
+    <Compile Include="Resources\ElastiCache\ReplicationGroup.cs" />
     <Compile Include="Resources\ElastiCache\SecurityGroup.cs" />
     <Compile Include="Resources\ElastiCache\SecurityGroupIngress.cs" />
     <Compile Include="Resources\ElastiCache\SubnetGroup.cs" />

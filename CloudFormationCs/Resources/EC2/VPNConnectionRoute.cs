@@ -11,7 +11,7 @@ namespace CloudFormationCs.Resources.EC2
         public String DestinationCidrBlock { get; set; }
 
         [Required(true)]
-        public String VpnConnectionId { get; set; }
+        public StringRef VpnConnectionId { get; set; }
 
         public VPNConnectionRoute()
             : base()
