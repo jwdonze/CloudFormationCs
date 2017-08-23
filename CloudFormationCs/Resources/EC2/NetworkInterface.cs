@@ -1,4 +1,5 @@
 using System;
+using System.Web.Script.Serialization;
 
 namespace CloudFormationCs.Resources.EC2
 {
@@ -12,6 +13,9 @@ namespace CloudFormationCs.Resources.EC2
 
         [Required(false)]
         public StringRef[] GroupSet { get; set; }
+
+        [ScriptIgnore]
+        public StringRef GroupSet1 { set { this.GroupSet = new StringRef[] { value }; } }
 
         [Required(false)]
         public String PrivateIpAddress { get; set; }

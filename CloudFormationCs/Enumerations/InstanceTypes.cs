@@ -153,30 +153,62 @@ namespace CloudFormationCs
         /// </summary>
         g2_8xlarge,
 
+        /// <summary>
+        /// 64 CPU 	976   GiB RAM, 1 x 1,920 SSD 	10 Gigabit  Intel Xeon E7-8880 v3 	2.3
+        /// </summary>
+        x1_16large,
+        /// <summary>
+        /// 128 CPU  1,952 GiB RAM, 2 x 1,920 SSD 	20 Gigabit  Intel Xeon E7-8880 v3 	2.3
+        /// </summary>
+        x1_32xlarge,
+        /// <summary>
+        /// 2  CPU  15.25 GiB RAM, ELB Only   Up to 10 Gigabit    Intel Xeon E5-2686 v4   2.3
+        /// </summary>
+        r4_large,
+        /// <summary>
+        /// 4  CPU  30.5  GiB RAM, ELB Only   Up to 10 Gigabit    Intel Xeon E5-2686 v4   2.3
+        /// </summary>
+        r4_xlarge,
+        /// <summary>
+        /// 8  CPU  61    GiB RAM, ELB Only   Up to 10 Gigabit    Intel Xeon E5-2686 v4   2.3
+        /// </summary>
+        r4_2xlarge,
+        /// <summary>
+        /// 16 CPU  122   GiB RAM, ELB Only   Up to 10 Gigabit    Intel Xeon E5-2686 v4   2.3
+        /// </summary>
+        r4_4xlarge,
+        /// <summary>
+        /// 32 CPU  244   GiB RAM, ELB Only   10 Gigabit  Intel Xeon E5-2686 v4   2.3
+        /// </summary>
+        r4_8xlarge,
+        /// <summary>
+        /// 64 CPU  488   GiB RAM, ELB Only   20 Gigabit  Intel Xeon E5-2686 v4   2.3
+        /// </summary>
+        r4_16xlarge, 
 
+
+        /// <summary>
+        /// 2 CPU, 15.25 GiB RAM, 1 x 32 SSD, Moderate Net  Intel Xeon E5-2670 v2 	2.5
+        /// </summary>
+        r3_large,
 
 		/// <summary>
-		/// 2 CPU, 15.25 GiB RAM, 1 x 32 SSD, Moderate Net
-		/// </summary>
-		r3_large,
-
-		/// <summary>
-        /// 4 CPU, 30.5 GiB RAM, 1 x 80 SSD, Moderate Net
+        /// 4 CPU, 30.5 GiB RAM, 1 x 80 SSD, Moderate Net  Intel Xeon E5-2670 v2 	2.5
 		/// </summary>
 		r3_xlarge,
 
 		/// <summary>
-        /// 8 CPU, 61 GiB RAM, 1 x 160 SSD, High Net
+        /// 8 CPU, 61 GiB RAM, 1 x 160 SSD, High Net  Intel Xeon E5-2670 v2 	2.5
 		/// </summary>
 		r3_2xlarge,
 
 		/// <summary>
-        /// 16 CPU, 122 GiB RAM, 1 x 320 SSD, High Net
+        /// 16 CPU, 122 GiB RAM, 1 x 320 SSD, High Net  Intel Xeon E5-2670 v2 	2.5
 		/// </summary>
 		r3_4xlarge,
 
 		/// <summary>
-		/// 32 CPU, 244 GiB RAM, 2 x 320 SSD, 10 Gigabit Net
+		/// 32 CPU, 244 GiB RAM, 2 x 320 SSD, 10 Gigabit Net  Intel Xeon E5-2670 v2 	2.5
 		/// </summary>
 		r3_8xlarge,
 
@@ -221,6 +253,38 @@ namespace CloudFormationCs
         /// </summary>
         d2_8xlarge,
 
+        /// <summary>
+        /// 4  CPU, 61  GiB RAM, EBS Only    High    Intel Xeon E5-2686 v4   2.3 (base)  2.7 (turbo)
+        /// </summary>
+        p2_xlarge,
+        /// <summary>
+        /// 32 CPU, 488 GiB RAM, EBS Only    10 Gigabit  Intel Xeon E5-2686 v4   2.3 (base)  2.7 (turbo)
+        /// </summary>
+        p2_8xlarge,
+        /// <summary>
+        /// 64 CPU, 732 GiB RAM, EBS Only    20 Gigabit  Intel Xeon E5-2686 v4   2.3 (base)  2.7 (turbo)
+        /// </summary>
+        p2_16xlarge,
+        /// <summary>
+        /// 16 CPU,	122 GiB RAM, EBS Only    Up to 10 Gigabit    Intel Xeon E5-2686 v4  	2.3 (base)  2.7 (turbo)
+        /// </summary>
+        g3_4xlarge,
+        /// <summary>
+        /// 32 CPU,	244 GiB RAM, EBS Only 	10 Gigabit  Intel Xeon E5-2686 v4  	2.3 (base)  2.7 (turbo)
+        /// </summary>
+        g3_8xlarge,
+        /// <summary>
+        /// 64 CPU,	488 GiB RAM, EBS Only 	20 Gigabit  Intel Xeon E5-2686 v4  	2.3 (base)  2.7 (turbo)
+        /// </summary>
+        g3_16xlarge,
+        /// <summary>
+        /// 8  CPU, 122 GiB RAM, 480 SSD     Up to 10 Gigabit        Intel Xeon E5-2686 v4 	    2.3 (base)  2.7 (turbo)
+        /// </summary>
+        f1_2xlarge,
+        /// <summary>
+        /// 64 CPU,	976 GiB RAM, 4 x 960 	20 Gigabit      Intel Xeon E5-2686 v4 	    2.3 (base)  2.7 (turbo)
+        /// </summary>
+        f1_16xlarge, 
 
 
         #region PREVIOUS GENERATION 
