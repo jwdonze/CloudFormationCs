@@ -80,5 +80,6 @@ namespace CloudFormationCs.Resources.Route53
         SPF,
         SRV,
         TXT,
+        CAA,
     }
 }
