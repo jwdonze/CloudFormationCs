@@ -24,7 +24,7 @@ namespace CloudFormationCs.Resources.Route53
         public String Region { get; set; }
 
         [Required(RequiredAttribute.RequirementTypes.Conditional)]
-        public String[] ResourceRecords { get; set; }
+        public StringRef[] ResourceRecords { get; set; }
 
         [Required(RequiredAttribute.RequirementTypes.Conditional)]
         public String SetIdentifier { get; set; }
