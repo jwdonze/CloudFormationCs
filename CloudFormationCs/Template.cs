@@ -14,7 +14,7 @@ namespace CloudFormationCs
 
         public IKeyValue[] Mappings { get; set; }
 
-        public Resource[] Resources { get; set; }
+        public List<Resource> Resources { get; set; }
 
         public Template()
         {
