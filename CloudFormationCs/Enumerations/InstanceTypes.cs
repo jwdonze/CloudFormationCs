@@ -38,7 +38,30 @@ namespace CloudFormationCs
         /// </summary>
         t2_2xlarge,
 
-
+        /// <summary>
+        /// 2 CPU, 8 GiB RAM, ebsonly
+        /// </summary>
+        m5_large,
+        /// <summary>
+        /// 4 CPU, 16 GiB RAM, ebsonly
+        /// </summary>
+        m5_xlarge,
+        /// <summary>
+        /// 8 CPU, 32 GiB RAM, ebsonly
+        /// </summary>
+        m5_2xlarge,
+        /// <summary>
+        /// 16 CPU, 64 GiB RAM, ebsonly
+        /// </summary>
+        m5_4xlarge,
+        /// <summary>
+        /// 48 CPU, 192 GiB RAM, ebsonly
+        /// </summary>
+        m5_12xlarge,
+        /// <summary>
+        /// 96 CPU, 384 GiB RAM, ebsonly
+        /// </summary>
+        m5_24xlarge,
 
         /// <summary>
         /// 2 CPU, 8 GiB RAM, EBS Only, Moderate Net, 450 Mbps EBS

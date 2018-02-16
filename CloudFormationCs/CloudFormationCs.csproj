@@ -61,6 +61,8 @@
     <Compile Include="Resources\AutoScaling\ScalingPolicy.cs" />
     <Compile Include="Resources\AutoScaling\ScheduledAction.cs" />
     <Compile Include="Resources\AutoScaling\Trigger.cs" />
+    <Compile Include="Resources\CertificateManager\Certificate.cs" />
+    <Compile Include="Resources\CertificateManager\DomainValidationOption.cs" />
     <Compile Include="Resources\CloudFormation\Authentication.cs" />
     <Compile Include="Resources\CloudFormation\CustomResource.cs" />
     <Compile Include="Resources\CloudFormation\Init.cs" />
