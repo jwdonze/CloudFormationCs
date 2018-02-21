@@ -10,5 +10,6 @@ namespace CloudFormationCs.Resources.CloudFront
         public bool Enabled { get; set; }
         public Origin[] Origins { get; set; }
         public string PriceClass { get; set; }
+        public string HttpVersion { get; set; }
     }
 }
