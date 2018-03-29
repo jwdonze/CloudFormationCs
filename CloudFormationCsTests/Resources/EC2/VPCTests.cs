@@ -3,6 +3,7 @@ using NUnit.Framework;
 
 using CFN = CloudFormationCs;
 using EC2 = CloudFormationCs.Resources.EC2;
+using System.Collections.Generic;
 
 namespace CloudFormationCsTests.Resources.EC2Tests
 {
@@ -46,7 +47,7 @@ namespace CloudFormationCsTests.Resources.EC2Tests
 ";
             var template = new CFN.Template()
             {
-                Resources = new CFN.Resource[]
+                Resources = new List<CFN.Resource>()
                 {
                     new EC2.VPC("VPC1")
                     {

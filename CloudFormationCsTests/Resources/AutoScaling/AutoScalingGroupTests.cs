@@ -4,6 +4,7 @@ using NUnit.Framework;
 using CFN = CloudFormationCs;
 using AutoScaling = CloudFormationCs.Resources.AutoScaling;
 using CloudWatch = CloudFormationCs.Resources.CloudWatch;
+using System.Collections.Generic;
 
 namespace CloudFormationCsTests.Resources.AutoScalingTests
 {
@@ -41,7 +42,7 @@ namespace CloudFormationCsTests.Resources.AutoScalingTests
 			
             var template = new CFN.Template()
             {
-                Resources = new CFN.Resource[]
+                Resources = new List<CFN.Resource>()
                 {
                     new AutoScaling.LaunchConfiguration("SimpleConfig")
                     {
@@ -101,7 +102,7 @@ namespace CloudFormationCsTests.Resources.AutoScalingTests
 
             var template = new CFN.Template()
             {
-                Resources = new CFN.Resource[]
+                Resources = new List<CFN.Resource>()
                 {
                     new AutoScaling.AutoScalingGroup("MyServerGroup")
                     {
@@ -160,7 +161,7 @@ namespace CloudFormationCsTests.Resources.AutoScalingTests
 			
             var template = new CFN.Template()
             {
-                Resources = new CFN.Resource[]
+                Resources = new List<CFN.Resource>()
                 {
                     new AutoScaling.ScalingPolicy("ScaleUpPolicy")
                     {
@@ -224,7 +225,7 @@ namespace CloudFormationCsTests.Resources.AutoScalingTests
 
             var template = new CFN.Template()
             {
-                Resources = new CFN.Resource[]
+                Resources = new List<CFN.Resource>()
                 {
                     new AutoScaling.AutoScalingGroup("MyAsGroupWithNotification")
                     {
@@ -283,7 +284,7 @@ namespace CloudFormationCsTests.Resources.AutoScalingTests
 			
             var template = new CFN.Template()
             {
-                Resources = new CFN.Resource[]
+                Resources = new List<CFN.Resource>()
                 {
                     new AutoScaling.Trigger("MyTrigger")
                     {
@@ -337,7 +338,7 @@ namespace CloudFormationCsTests.Resources.AutoScalingTests
 			
             var template = new CFN.Template()
             {
-                Resources = new CFN.Resource[]
+                Resources = new List<CFN.Resource>()
                 {
                     new AutoScaling.AutoScalingGroup("ASG1")
                     {

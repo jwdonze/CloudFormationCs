@@ -5,6 +5,7 @@ using CFN = CloudFormationCs;
 using IAM = CloudFormationCs.Resources.IAM;
 using EC2 = CloudFormationCs.Resources.EC2;
 using AutoScaling = CloudFormationCs.Resources.AutoScaling;
+using System.Collections.Generic;
 
 namespace CloudFormationCsTests.Resources.IAMTests
 {
@@ -65,7 +66,7 @@ namespace CloudFormationCsTests.Resources.IAMTests
 ";
             var template = new CFN.Template()
             {
-                Resources = new CFN.Resource[]
+                Resources = new List<CFN.Resource>()
                 {
                   //""myLCOne"": {
                   //   ""Type"": ""AWS::AutoScaling::LaunchConfiguration"",

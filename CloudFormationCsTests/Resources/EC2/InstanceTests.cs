@@ -48,7 +48,7 @@ namespace CloudFormationCsTests.Resources.EC2Tests
             var template = new CFN.Template()
             {
                 Descrption = "Ec2 block device mapping",
-                Resources = new CFN.Resource[]
+                Resources = new List<CFN.Resource>()
                 {
                     new EC2.Instance("MyEC2Instance")
                     {
@@ -193,7 +193,7 @@ namespace CloudFormationCsTests.Resources.EC2Tests
             var template = new CFN.Template()
             {
                 Descrption = "Ec2 metadata",
-                Resources = new CFN.Resource[]
+                Resources = new List<CFN.Resource>()
                 {
                     new EC2.Instance("MyEC2Instance")
                     {

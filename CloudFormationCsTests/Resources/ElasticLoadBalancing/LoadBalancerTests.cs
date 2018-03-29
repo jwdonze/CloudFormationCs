@@ -3,6 +3,7 @@ using NUnit.Framework;
 
 using CFN = CloudFormationCs;
 using ELB = CloudFormationCs.Resources.ElasticLoadBalancing;
+using System.Collections.Generic;
 
 namespace CloudFormationCsTests.Resources.ElasticLoadBalancingTests
 {
@@ -64,7 +65,7 @@ namespace CloudFormationCsTests.Resources.ElasticLoadBalancingTests
             var template = new CFN.Template()
             {
                 Descrption = "ELB Template",
-                Resources = new CFN.Resource[]
+                Resources = new List<CFN.Resource>()
                 {
                     new ELB.LoadBalancer("MyELB")
                     {

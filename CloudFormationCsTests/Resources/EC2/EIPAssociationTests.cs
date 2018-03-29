@@ -3,6 +3,7 @@ using NUnit.Framework;
 
 using CFN = CloudFormationCs;
 using EC2 = CloudFormationCs.Resources.EC2;
+using System.Collections.Generic;
 
 namespace CloudFormationCsTests.Resources.EC2Tests
 {
@@ -44,7 +45,7 @@ namespace CloudFormationCsTests.Resources.EC2Tests
 ";
             var template = new CFN.Template()
             {
-                Resources = new CFN.Resource[]
+                Resources = new List<CFN.Resource>()
                 {
                     new EC2.EIP("EIP1")
                     {
@@ -52,7 +53,7 @@ namespace CloudFormationCsTests.Resources.EC2Tests
                     },
                     new EC2.EIPAssociation("EIP1Assoc")
                     {
-                        DependsOn = "InstanceResourceName1",
+                        DependsOn = new string[] { "InstanceResourceName1", },
                         AllocationId = new CFN.Fn__GetAtt("AllocationId", "EIP1"), 
                         NetworkInterfaceId = "eni-12345678",
                     },
@@ -86,7 +87,7 @@ namespace CloudFormationCsTests.Resources.EC2Tests
 ";
             var template = new CFN.Template()
             {
-                Resources = new CFN.Resource[]
+                Resources = new List<CFN.Resource>()
                 {
                     new EC2.EIPAssociation("EIP1Assoc")
                     {

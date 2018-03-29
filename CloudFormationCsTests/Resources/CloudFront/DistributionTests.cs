@@ -3,6 +3,7 @@ using NUnit.Framework;
 
 using CFN = CloudFormationCs;
 using CF = CloudFormationCs.Resources.CloudFront;
+using System.Collections.Generic;
 
 namespace CloudFormationCsTests.Resources.CloudFrontTests
 {
@@ -55,7 +56,7 @@ namespace CloudFormationCsTests.Resources.CloudFrontTests
 ";
             var template = new CFN.Template()
             {
-                Resources = new CFN.Resource[]
+                Resources = new List<CFN.Resource>()
                 {
                     new CF.Distribution("MyCdn")
                     {

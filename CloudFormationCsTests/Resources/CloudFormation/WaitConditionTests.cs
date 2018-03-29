@@ -3,6 +3,7 @@ using NUnit.Framework;
 
 using CFN = CloudFormationCs;
 using CloudFormation = CloudFormationCs.Resources.CloudFormation;
+using System.Collections.Generic;
 
 namespace CloudFormationCsTests.Resources.CloudFormationTests
 {
@@ -12,6 +13,8 @@ namespace CloudFormationCsTests.Resources.CloudFormationTests
         [Test()]
         public void WaitCondition()
         {
+            // This isn't needed but it's also not causing an error, so leaving it:
+            //      "Properties": {},
             var target = @"
             {
                 ""AWSTemplateFormatVersion"" : ""2010-09-09"",    
@@ -19,6 +22,7 @@ namespace CloudFormationCsTests.Resources.CloudFormationTests
                 {
                     ""WaitHandle"" : 
                     {
+                        ""Properties"": {},
                         ""Type"" : ""AWS::CloudFormation::WaitConditionHandle""
                     },        
                     ""SetupWaitCondition"" : 
@@ -39,7 +43,7 @@ namespace CloudFormationCsTests.Resources.CloudFormationTests
 ";
             var template = new CFN.Template()
             {
-                Resources = new CFN.Resource[]
+                Resources = new List<CFN.Resource>()
                 {
                     new CFN.Resources.CloudFormation.WaitConditionHandle("WaitHandle"),
                     new CFN.Resources.CloudFormation.WaitCondition("SetupWaitCondition")

@@ -3,6 +3,7 @@ using NUnit.Framework;
 
 using CFN = CloudFormationCs;
 using Route53 = CloudFormationCs.Resources.Route53;
+using System.Collections.Generic;
 
 namespace CloudFormationCsTests.Resources.Route53Tests
 {
@@ -78,7 +79,7 @@ namespace CloudFormationCsTests.Resources.Route53Tests
 ";
             var template = new CFN.Template()
             {
-                Resources = new CFN.Resource[]
+                Resources = new List<CFN.Resource>()
                 {
                     new Route53.RecordSetGroup("SOMEDOMAIN1dotCOM")
                     {
@@ -100,7 +101,7 @@ namespace CloudFormationCsTests.Resources.Route53Tests
                             {
                                 TTL = "300",
                                 Name = "ns.somedomain1.com.",
-                                ResourceRecords = new string[]
+                                ResourceRecords = new CFN.StringRef[]
                                 {
                                     "8.8.8.8",
                                 },
@@ -110,7 +111,7 @@ namespace CloudFormationCsTests.Resources.Route53Tests
                             {
                                 TTL = "300",
                                 Name = "autodiscover.somedomain1.com.",
-                                ResourceRecords = new string[]
+                                ResourceRecords = new CFN.StringRef[]
                                 {
                                     "autodiscover.outlook.com",
                                 },
@@ -138,7 +139,7 @@ namespace CloudFormationCsTests.Resources.Route53Tests
                             {
                                 TTL = "300",
                                 Name = "12345.somedomain2.COM.",
-                                ResourceRecords = new string[]
+                                ResourceRecords = new CFN.StringRef[]
                                 {
                                     "verify.bing.com.",
                                 },

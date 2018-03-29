@@ -3,6 +3,7 @@ using NUnit.Framework;
 
 using CFN = CloudFormationCs;
 using IAM = CloudFormationCs.Resources.IAM;
+using System.Collections.Generic;
 
 namespace CloudFormationCsTests.Resources.IAMTests
 {
@@ -29,7 +30,7 @@ namespace CloudFormationCsTests.Resources.IAMTests
 			
             var template = new CFN.Template()
             {
-                Resources = new CFN.Resource[]
+                Resources = new List<CFN.Resource>()
                 {
                     new IAM.UserToGroupAddition("addUserToGroup")
                     {
