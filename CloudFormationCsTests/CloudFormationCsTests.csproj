@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompareUtils.cs" />
+    <Compile Include="FunctionTests.cs" />
     <Compile Include="Resources\AutoScaling\AutoScalingGroupTests.cs" />
     <Compile Include="Resources\AutoScaling\LaunchConfigurationTests.cs" />
     <Compile Include="Resources\AutoScaling\ScalingPolicyTests.cs" />
