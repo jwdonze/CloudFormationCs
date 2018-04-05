@@ -1,19 +1,17 @@
 using System;
-using System.Web.Script.Serialization;
+using Newtonsoft.Json;
 
 namespace CloudFormationCs
 {
-    public class Parameter
+    public class Parameter : IKeyValue
     {
-        [ScriptIgnore]
+        [JsonIgnore]
         public String Name { get; private set; }
 
         public String Description { get; set; }
 
-        [EmitAsString]
         public ParameterTypes Type { get; set; }
 
-        [EmitNullsAttribute]
         public String Default { get; set; }
 
         public String[] AllowedValues { get; set; }
@@ -22,7 +20,10 @@ namespace CloudFormationCs
         {
             this.Type = ParameterTypes.Undefined;
         }
-
+        [JsonIgnore]
+        public string Key {  get { return this.Name; } }
+        [JsonIgnore]
+        public Object Value{  get { return this; } }
 
         public Parameter(string name)
             : this()

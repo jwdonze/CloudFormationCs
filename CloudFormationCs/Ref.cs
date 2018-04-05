@@ -2,7 +2,7 @@ using System;
 
 namespace CloudFormationCs
 {
-    public class Ref : KeyByType, IKeyValue
+    public class Ref : KeyByType
     {
         public Ref() { }
 

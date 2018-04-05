@@ -1,3 +1,5 @@
+using CloudFormationCs.Converters;
+using Newtonsoft.Json;
 using System;
 
 namespace CloudFormationCs.Resources.EC2
@@ -23,7 +25,6 @@ namespace CloudFormationCs.Resources.EC2
         public Tag[] Tags { get; set; }
 
         [Required(false)]
-        [EmitAsString]
         public VolumeTypes VolumeType { get; set; }
 
         public Volume()

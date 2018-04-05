@@ -1,9 +1,8 @@
-using System;
 using NUnit.Framework;
+using System.Collections.Generic;
 
 using CFN = CloudFormationCs;
 using EC2 = CloudFormationCs.Resources.EC2;
-using System.Collections.Generic;
 
 namespace CloudFormationCsTests.Resources.EC2Tests
 {

@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using Newtonsoft.Json;
+
 namespace CloudFormationCs
 {
     /// <summary>
     /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-findinmap.html
     /// </summary>
-    public class Fn__FindInMap : KeyByType, IKeyValue
+    public class Fn__FindInMap : KeyByType, IWriteObject
     {
         public Fn__FindInMap() { }
 
@@ -19,17 +21,9 @@ namespace CloudFormationCs
             this._secondLevelKey  =secondLevelKey;
         }
 
-        public Object Value
+        public void WriteTo(JsonWriter writer, JsonSerializer serializer)
         {
-            get
-            {
-                var ht = new List<Object>();
-
-                ht.Add(this._mapName);
-                ht.Add(this._topLevelKey.Ref);
-                ht.Add(this._secondLevelKey.Ref);
-                return ht;
-            }
+            this.WriteNamePlusArray(writer, serializer, null, this._mapName, this._topLevelKey, this._secondLevelKey);
         }
 
         private String _mapName;

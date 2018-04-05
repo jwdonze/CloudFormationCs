@@ -1,3 +1,5 @@
+using CloudFormationCs.Converters;
+using Newtonsoft.Json;
 using System;
 
 namespace CloudFormationCs.Resources.EC2
@@ -11,7 +13,7 @@ namespace CloudFormationCs.Resources.EC2
         public Boolean DeleteOnTermination { get; set; }
 
         [Required(true)]
-        [EmitAsString]
+        [JsonConverter(typeof(LowerCaseStringConverter))]
         public Int32? DeviceIndex { get; set; }
 
         [Required(true)]

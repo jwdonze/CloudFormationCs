@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using System;
 using System.Text;
 
@@ -33,7 +34,6 @@ namespace CloudFormationCs.Resources.Route53
         public String TTL { get; set; }
 
         [Required(true)]
-        [EmitAsString]
         public NameTypes? Type { get; set; }
 
         [Required(RequiredAttribute.RequirementTypes.Conditional)]

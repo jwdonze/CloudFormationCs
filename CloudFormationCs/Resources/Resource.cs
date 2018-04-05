@@ -1,27 +1,17 @@
 using System;
-using System.Web.Script.Serialization;
+using Newtonsoft.Json;
 
 namespace CloudFormationCs
 {
-    internal class ResourcePropertyContainer
-    {
-        public string ResourceIdentifier { get; private set; }
-        public string Version { get; set; }
-        public Resource Properties { get; set; }
-        public string Type { get; set; }
-        [CompressSingleArray]
-        public string[] DependsOn { get; set; }
-        public Resources.EC2.Metadata Metadata { get; set; }
-    }
     public class Resource
     {
-        [ScriptIgnore]
+        [JsonIgnore]
         public string ResourceIdentifier { get; private set; }
 
-        [ScriptIgnore]
+        [JsonIgnore]
         public string Version { get; set; }
 
-        [NonProperty]
+        [JsonIgnore]
         public string[] DependsOn { get; set; }
 
         public Resource()

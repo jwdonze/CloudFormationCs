@@ -1,5 +1,7 @@
 using System;
 
+using Newtonsoft.Json;
+
 namespace CloudFormationCs.Resources.EC2
 {
     /// <summary>
@@ -9,6 +11,7 @@ namespace CloudFormationCs.Resources.EC2
     {
         public String Comment { get; set; }
 
+        [JsonProperty(PropertyName = "AWS::CloudFormation::Init")]
         public CloudFormation.Init Init { get; set; }
 
         public static Metadata WithInit(CloudFormationCs.Resources.CloudFormation.config config)

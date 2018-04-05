@@ -1,5 +1,6 @@
 using System;
-using System.Web.Script.Serialization;
+using CloudFormationCs.Converters;
+using Newtonsoft.Json;
 
 namespace CloudFormationCs.Resources.AutoScaling
 {
@@ -20,7 +21,7 @@ namespace CloudFormationCs.Resources.AutoScaling
 
         public String InstanceId { get; set; }
 
-        [EmitAsString]
+        [JsonConverter(typeof(LowerCaseStringConverter))]
         public Boolean InstanceMonitoring { get; set; }
 
         public String InstanceType { get; set; }
@@ -31,7 +32,7 @@ namespace CloudFormationCs.Resources.AutoScaling
 
         public String RamDiskId { get; set; }
 
-        [ScriptIgnore]
+        [JsonIgnore]
         public StringRef SecurityGroup { set { this.SecurityGroups = new StringRef[] { value, }; } }
 
         public StringRef[] SecurityGroups { get; set; }

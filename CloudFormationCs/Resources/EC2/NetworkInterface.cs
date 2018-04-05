@@ -1,5 +1,6 @@
 using System;
-using System.Web.Script.Serialization;
+using CloudFormationCs.Converters;
+using Newtonsoft.Json;
 
 namespace CloudFormationCs.Resources.EC2
 {
@@ -14,7 +15,7 @@ namespace CloudFormationCs.Resources.EC2
         [Required(false)]
         public StringRef[] GroupSet { get; set; }
 
-        [ScriptIgnore]
+        [JsonIgnore]
         public StringRef GroupSet1 { set { this.GroupSet = new StringRef[] { value }; } }
 
         [Required(false)]
@@ -26,7 +27,7 @@ namespace CloudFormationCs.Resources.EC2
         [Required(false)]
         public Int32 SecondaryPrivateIpAddressCount { get; set; }
 
-        [EmitAsString]
+        [JsonConverter(typeof(LowerCaseStringConverter))]
         [Required(false)]
         public Boolean? SourceDestCheck { get; set; }
 

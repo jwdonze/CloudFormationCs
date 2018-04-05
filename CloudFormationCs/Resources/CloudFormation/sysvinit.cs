@@ -1,3 +1,5 @@
+using CloudFormationCs.Converters;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
@@ -5,10 +7,10 @@ namespace CloudFormationCs.Resources.CloudFormation
 {
     public class sysvinit
     {
-        [EmitAsString]
+        [JsonConverter(typeof(LowerCaseStringConverter))]
         public Boolean enabled { get; set; }
 
-        [EmitAsString]
+        [JsonConverter(typeof(LowerCaseStringConverter))]
         public Boolean ensureRunning { get; set; }
 
         public String[] files { get; set; }

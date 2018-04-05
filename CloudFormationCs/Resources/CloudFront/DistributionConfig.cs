@@ -1,3 +1,5 @@
+using CloudFormationCs.Converters;
+using Newtonsoft.Json;
 using System;
 
 namespace CloudFormationCs.Resources.CloudFront
@@ -6,7 +8,7 @@ namespace CloudFormationCs.Resources.CloudFront
     {
         public string Comment { get; set; }
         public CacheBehavior DefaultCacheBehavior { get; set; }
-        [EmitAsString]
+        [JsonConverter(typeof(LowerCaseStringConverter))]
         public bool Enabled { get; set; }
         public Origin[] Origins { get; set; }
         public string PriceClass { get; set; }

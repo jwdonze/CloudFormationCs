@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CloudFormationCs.Converters;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +21,7 @@ namespace CloudFormationCs.Resources.EC2
         [Required(false)]
         public String Description { get; set; }
 
-        [EmitAsString]
+        [JsonConverter(typeof(LowerCaseStringConverter))]
         [Required(true)]
         public int? DeviceIndex { get; set; }
 
@@ -38,7 +40,7 @@ namespace CloudFormationCs.Resources.EC2
         [Required(false)]
         public Int32 SecondaryPrivateIpAddressCount { get; set; }
 
-        //[EmitAsString]
+        //[JsonConverter(typeof(Template.EmitAsStringConverter))]
         //[Required(false)]
         //public Boolean? SourceDestCheck { get; set; }
 

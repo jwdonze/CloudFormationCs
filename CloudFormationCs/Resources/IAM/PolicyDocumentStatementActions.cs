@@ -1,15 +1,27 @@
 using System;
 
+using Newtonsoft.Json;
+
 namespace CloudFormationCs.Resources.IAM
 {
-    public class ActionsFormatter : IAwsCustomFormatter
+    public class ActionsFormatter : JsonConverter
     {
-        public Object FormatForAws(Object input)
+        public override bool CanConvert(Type objectType)
         {
-            return CfnHelpers.GetPolicyName((Resources.IAM.PolicyDocumentStatementActions)input);
+            return objectType == typeof(Resources.IAM.PolicyDocumentStatementActions)
+                ;
         }
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            writer.WriteValue(CfnHelpers.GetPolicyName((Resources.IAM.PolicyDocumentStatementActions)value));
+        }
+        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            throw new NotImplementedException();
+        }
+
     }
-    [EmitAsStringAttribute(typeof(ActionsFormatter))]
+    [JsonConverter(typeof(ActionsFormatter))]
     public enum PolicyDocumentStatementActions
     {
         /// <summary>

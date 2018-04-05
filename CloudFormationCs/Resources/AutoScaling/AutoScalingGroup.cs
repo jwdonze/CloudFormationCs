@@ -1,5 +1,6 @@
 using System;
-using System.Web.Script.Serialization;
+using CloudFormationCs.Converters;
+using Newtonsoft.Json;
 
 namespace CloudFormationCs.Resources.AutoScaling
 {
@@ -8,7 +9,7 @@ namespace CloudFormationCs.Resources.AutoScaling
     /// </summary>
     public class AutoScalingGroup : Resource
     {
-        [ScriptIgnore]
+        [JsonIgnore]
         public StringRef AvailabilityZone { set { this.AvailabilityZones = new StringRef[] { value, }; } }
 
         //[CompressSingleArray]
@@ -18,7 +19,7 @@ namespace CloudFormationCs.Resources.AutoScaling
 
         public String DesiredCapacity { get; set; }
 
-        [EmitAsString]
+        [JsonConverter(typeof(LowerCaseStringConverter))]
         public Int16 HealthCheckGracePeriod { get; set; }
 
         public String HealthCheckType { get; set; }
@@ -27,7 +28,7 @@ namespace CloudFormationCs.Resources.AutoScaling
 
         public StringRef LaunchConfigurationName { get; set; }
 
-        [ScriptIgnore]
+        [JsonIgnore]
         public StringRef LoadBalancerName { set { this.LoadBalancerNames = new StringRef[] { value, }; } }
 
         public StringRef[] LoadBalancerNames { get; set; }

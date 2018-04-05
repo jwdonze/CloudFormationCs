@@ -20,95 +20,72 @@ namespace CloudFormationCsTests.Resources.IAMTests
             // changes to expected:
             //   RolePolicies Statement Action (added square brackets)
             var target = @"
-			{
-			   ""AWSTemplateFormatVersion"": ""2010-09-09"",
-			   ""Resources"": {
-			      ""RootRole"": {
-			         ""Type"": ""AWS::IAM::Role"",
-			         ""Properties"": {
-			            ""AssumeRolePolicyDocument"": {
-			               ""Version"" : ""2012-10-17"",
-			               ""Statement"": [ {
-			                  ""Effect"": ""Allow"",
-			                  ""Principal"": {
-			                     ""Service"": [ ""ec2.amazonaws.com"" ]
-			                  },
-			                  ""Action"": [ ""sts:AssumeRole"" ]
-			               } ]
-			            },
-			            ""Path"": ""/""
-			         }
-			      },
-			      ""RolePolicies"": {
-			         ""Type"": ""AWS::IAM::Policy"",
-			         ""Properties"": {
-			            ""PolicyName"": ""root"",
-			            ""PolicyDocument"": {
-			               ""Version"" : ""2012-10-17"",
-			               ""Statement"": [ {
-			                  ""Effect"": ""Allow"",
-			                  ""Action"": [ ""*"" ],
-			                  ""Resource"": ""*""
-			               } ]
-			            },
-			            ""Roles"": [ { ""Ref"": ""RootRole"" } ]
-			         }
-			      },
-			      ""RootInstanceProfile"": {
-			         ""Type"": ""AWS::IAM::InstanceProfile"",
-			         ""Properties"": {
-			            ""Path"": ""/"",
-			            ""Roles"": [ { ""Ref"": ""RootRole"" } ]
-			         }
-			      }
-			   }
-			}  
+{
+  ""AWSTemplateFormatVersion"": ""2010-09-09"",
+  ""Resources"": {
+     ""RootRole"": {
+        ""Type"": ""AWS::IAM::Role"",
+        ""Properties"": {
+           ""AssumeRolePolicyDocument"": {
+              ""Version"" : ""2012-10-17"",
+              ""Statement"": [
+                {
+                  ""Effect"": ""Allow"",
+                  ""Principal"": {
+                    ""Service"": [
+                      ""ec2.amazonaws.com""
+                    ]
+                  },
+                  ""Action"": [
+                    ""sts:AssumeRole""
+                  ]
+                }
+              ]
+           },
+           ""Path"": ""/""
+        }
+     },
+  ""RolePolicies"": {
+    ""Type"": ""AWS::IAM::Policy"",
+      ""Properties"": {
+        ""PolicyName"": ""root"",
+          ""PolicyDocument"": {
+            ""Version"" : ""2012-10-17"",
+            ""Statement"": [ 
+              {
+                 ""Effect"": ""Allow"",
+                 ""Action"": [
+                   ""*""
+                 ],
+                 ""Resource"": ""*""
+              }
+            ]
+          },
+          ""Roles"": [
+            {
+              ""Ref"": ""RootRole""
+            }
+          ]
+        }
+     },
+     ""RootInstanceProfile"": {
+       ""Type"": ""AWS::IAM::InstanceProfile"",
+       ""Properties"": {
+         ""Path"": ""/"",
+         ""Roles"": [ 
+           {
+             ""Ref"": ""RootRole""
+           }
+         ]
+       }
+    }
+  }
+}  
 ";
             var template = new CFN.Template()
             {
                 Resources = new List<CFN.Resource>()
                 {
-                  //""myLCOne"": {
-                  //   ""Type"": ""AWS::AutoScaling::LaunchConfiguration"",
-                  //   ""Version"": ""2009-05-15"",
-                  //   ""Properties"": {
-                  //      ""ImageId"": ""ami-205fba49"",
-                  //      ""InstanceType"": ""m1.small"",
-                  //      ""InstanceMonitoring"": ""true"",
-                  //      ""IamInstanceProfile"": { ""Ref"": ""RootInstanceProfile"" }
-                  //   }
-                  //},
-                  //""myASGrpOne"": {
-                  //   ""Type"": ""AWS::AutoScaling::AutoScalingGroup"",
-                  //   ""Version"": ""2009-05-15"",
-                  //   ""Properties"": {
-                  //      ""AvailabilityZones"": [ ""us-east-1a"" ],
-                  //      ""LaunchConfigurationName"": { ""Ref"": ""myLCOne"" },
-                  //      ""MinSize"": ""0"",
-                  //      ""MaxSize"": ""0"",
-                  //      ""HealthCheckType"": ""EC2"",
-                  //      ""HealthCheckGracePeriod"": ""120""
-                  //   }
-                  //},
-                  //  new AutoScaling.LaunchConfiguration("myLCOne")
-                  //  {
-
-                  //      Version = "2009-05-15",
-                  //      ImageId = "ami-205fba49",
-                  //      InstanceType = "m1.small",
-                  //      InstanceMonitoring = true,
-                  //      IamInstanceProfile = new CFN.Ref("RootInstanceProfile"),
-                  //  },
-                  //  new AutoScaling.AutoScalingGroup("myASGrpOne")
-                  //  {
-                  //      Version = "2009-05-15",
-                  //      AvailabilityZones = new CFN.StringRef[] { "us-east-1a" },
-                  //      LaunchConfigurationName = new CFN.Ref("myLCOne"),
-                  //      MinSize = "0",
-                  //      MaxSize = "0",
-                  //      HealthCheckType = "EC2",
-                  //      HealthCheckGracePeriod = 120
-                  //  },
                     new IAM.Role("RootRole")
                     {
                         AssumeRolePolicyDocument = new IAM.PolicyDocument()

@@ -1,5 +1,5 @@
 using System;
-using System.Web.Script.Serialization;
+using Newtonsoft.Json;
 
 namespace CloudFormationCs.Resources.EC2
 {
@@ -40,7 +40,7 @@ namespace CloudFormationCs.Resources.EC2
         [Required(false)]
         public Boolean Monitoring { get; set; }
 
-        [ScriptIgnore]
+        [JsonIgnore]
         public NetworkInterfaceEmbedded NetworkInterface { set { this.NetworkInterfaces = new NetworkInterfaceEmbedded[] { value, }; } }
 
         [Required(false)]
@@ -61,7 +61,7 @@ namespace CloudFormationCs.Resources.EC2
         [Required(false)]
         public StringRef[] SecurityGroups { get; set; }
 
-        [ScriptIgnore]
+        [JsonIgnore]
         public StringRef SecurityGroup { set { this.SecurityGroups = new StringRef[] { value, }; } }
 
         [Required(false)]
@@ -79,7 +79,7 @@ namespace CloudFormationCs.Resources.EC2
         [Required(false)]
         public StringRef UserData { get; set; }
 
-        [NonProperty]
+        [JsonIgnore]
         public Metadata Metadata { get; set; }
 
         [Required(false)]

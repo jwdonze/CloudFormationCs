@@ -1,5 +1,5 @@
 using System;
-using System.Web.Script.Serialization;
+using Newtonsoft.Json;
 
 
 namespace CloudFormationCs.Resources.AutoScaling
@@ -12,7 +12,7 @@ namespace CloudFormationCs.Resources.AutoScaling
 
         public CloudWatch.MetricDimension[] Dimensions { get; set; }
 
-        [ScriptIgnore]
+        [JsonIgnore]
         public CloudWatch.MetricDimension Dimensions1 { set { this.Dimensions = new CloudWatch.MetricDimension[] { value, }; } }
 
         public String LowerBreachScaleIncrement { get; set; }

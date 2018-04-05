@@ -1,5 +1,5 @@
 using System;
-using System.Web.Script.Serialization;
+using Newtonsoft.Json;
 
 namespace CloudFormationCs.Resources.IAM
 {
@@ -9,7 +9,7 @@ namespace CloudFormationCs.Resources.IAM
 
         public String[] Service { get; set; }
 
-        [ScriptIgnore]
+        [JsonIgnore]
         public String Service1 { set { this.Service = new String[] { value, }; } }
     }
 }

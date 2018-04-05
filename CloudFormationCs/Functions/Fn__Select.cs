@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ namespace CloudFormationCs
     /// <summary>
     /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-select.html
     /// </summary>
-    public class Fn__Select : KeyByType, IKeyValue
+    public class Fn__Select : KeyByType, IWriteObject
     {
         public Fn__Select() { }
 
@@ -18,18 +19,9 @@ namespace CloudFormationCs
             this._resName = resName;
         }
 
-        public Object Value
+        public void WriteTo(JsonWriter writer, JsonSerializer serializer)
         {
-            get
-            {
-                var ht = new List<Object>();
-
-                foreach (var s in _resName)
-                {
-                    ht.Add(s.Ref);
-                }
-                return new object[] { this._index, ht, };
-            }
+            this.WriteNamePlusArray(writer, serializer, this._index, this._resName);
         }
 
         StringRef _index;

@@ -2,11 +2,15 @@ using System;
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
+using Newtonsoft.Json;
+using CloudFormationCs.Converters;
 
 namespace CloudFormationCs.Mappings
 {
+    [JsonConverter(typeof(KeyArrayConverter))]
     public class InstanceType2Arch : IKeyValue
     {
+        [JsonIgnore]
         public String Key { get; set; }
 
         protected Dictionary<InstanceTypes, ArchTypes> _dictionary;

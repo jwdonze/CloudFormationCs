@@ -1,5 +1,5 @@
 using System;
-using System.Web.Script.Serialization;
+using Newtonsoft.Json;
 
 
 namespace CloudFormationCs.Resources.IAM
@@ -18,7 +18,7 @@ namespace CloudFormationCs.Resources.IAM
         [Required(false)]
         public StringRef[] Roles { get; set; }
 
-        [ScriptIgnore]
+        [JsonIgnore]
         public StringRef Roles1 { set { this.Roles = new StringRef[] { value }; } }
 
         [Required(RequiredAttribute.RequirementTypes.Conditional)]

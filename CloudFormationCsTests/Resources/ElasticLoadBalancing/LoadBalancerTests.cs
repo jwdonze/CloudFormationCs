@@ -64,7 +64,7 @@ namespace CloudFormationCsTests.Resources.ElasticLoadBalancingTests
 
             var template = new CFN.Template()
             {
-                Descrption = "ELB Template",
+                Description = "ELB Template",
                 Resources = new List<CFN.Resource>()
                 {
                     new ELB.LoadBalancer("MyELB")

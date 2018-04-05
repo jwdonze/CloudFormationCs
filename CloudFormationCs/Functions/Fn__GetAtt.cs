@@ -2,12 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
+using Newtonsoft.Json;
+
 namespace CloudFormationCs
 {
     /// <summary>
     /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html
     /// </summary>
-    public class Fn__GetAtt : KeyByType, IKeyValue
+    public class Fn__GetAtt : KeyByType, IWriteObject
     {
         public Fn__GetAtt() { }
 
@@ -16,17 +18,9 @@ namespace CloudFormationCs
             this._resName = resName;
             this._attrName = attrName;
         }
-
-        public Object Value
+        public void WriteTo(JsonWriter writer, JsonSerializer serializer)
         {
-            get
-            {
-                var ht = new List<Object>();
-
-                ht.Add(this._resName.Ref);
-                ht.Add(this._attrName);
-                return ht;
-            }
+            this.WriteNamePlusArray(writer, serializer, null, this._resName, this._attrName);
         }
 
         private StringRef _resName;

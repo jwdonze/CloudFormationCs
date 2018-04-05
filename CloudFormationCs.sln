@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudFormationCs", "CloudFormationCs\CloudFormationCs.csproj", "{E123AF0B-2762-4444-A731-A25C5C496A2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudFormationCs", "CloudFormationCs\CloudFormationCs.csproj", "{E123AF0B-2762-4444-A731-A25C5C496A2F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudFormationCsTests", "CloudFormationCsTests\CloudFormationCsTests.csproj", "{161B339F-4B42-427C-B26F-64CFB6165909}"
 EndProject
@@ -30,6 +30,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F459A6D-3D9C-4103-A51B-576CAEDD2FDA}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = AwsDeployTests\AwsDeployTests.csproj

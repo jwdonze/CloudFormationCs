@@ -1,5 +1,5 @@
 using System;
-using System.Web.Script.Serialization;
+using Newtonsoft.Json;
 
 namespace CloudFormationCs.Resources.IAM
 {
@@ -10,7 +10,6 @@ namespace CloudFormationCs.Resources.IAM
     /// </summary>
     public class Statement
     {
-        [EmitAsStringAttribute]
         public Effects Effect { get; set; }
 
         public PolicyDocumentStatementActions[] Action { get; set; }
@@ -89,13 +88,13 @@ namespace CloudFormationCs.Resources.IAM
         /// <summary>
         /// Creates an array of StringRef with a single value.
         /// </summary>
-        [ScriptIgnore]
+        [JsonIgnore]
         public StringRef Resource1 { set { this._resources = new StringRef[] { value }; } }
 
         /// <summary>
         /// Creates an array of StringRef with a single value.
         /// </summary>
-        [ScriptIgnore]
+        [JsonIgnore]
         public StringRef NotResource1 { set { this._notResources = new StringRef[] { value }; } }
 
 

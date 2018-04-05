@@ -47,7 +47,7 @@ namespace CloudFormationCsTests.Resources.EC2Tests
 ";
             var template = new CFN.Template()
             {
-                Descrption = "Ec2 block device mapping",
+                Description = "Ec2 block device mapping",
                 Resources = new List<CFN.Resource>()
                 {
                     new EC2.Instance("MyEC2Instance")
@@ -85,100 +85,91 @@ namespace CloudFormationCsTests.Resources.EC2Tests
         public void InstanceMetadata()
         {
             var target = @"
-			{
-				""AWSTemplateFormatVersion"" : ""2010-09-09"",
-				""Description"" : ""Ec2 metadata"",
-				""Resources"" : {
-					""MyEC2Instance"" : {
-						""Type"" : ""AWS::EC2::Instance"",
-
-						""Metadata"" : {
-							  ""Comment"" : ""Cfn Comment"",
-						      ""AWS::CloudFormation::Init"" : {
-
-						        ""config"" : {
-
-									""packages"" : {
-
-										""rpm"" : {
-											""epel"" : ""http://download.fedoraproject.org/pub/epel/5/i386/epel-release-5-4.noarch.rpm""
-										},
-										""yum"" : {
-										  ""httpd"" : [],
-										  ""php"" : []
-										},
-										""rubygems"" : {
-										  ""chef"" : [ ""0.10.2"" ]
-										}
-									},
-
-						          ""sources"" : {
-
-									""/etc/puppet"" : ""https://github.com/user1/cfn-demo/tarball/master""
-
-						          },
-
-						          ""commands"" : {
-								    ""test"" : {
-								        ""command"" : ""echo \""$MAGIC\"" > test.txt"",
-								        ""env"" : { ""MAGIC"" : ""I come from the environment!"" },
-								        ""cwd"" : ""~"",
-								        ""test"" : ""test ! -e ~/test.txt"",
-								        ""ignoreErrors"" : ""false""
-								    }						            
-						          },
-
-
-						          ""files"" : {
-									  ""/tmp/setup.mysql"" : {
-									    ""mode""  : ""000644"",
-									    ""owner"" : ""root"",
-									    ""group"" : ""root""
-									  }
-						          },
-
-
-						          ""services"" : {
-
-									  ""sysvinit"" : {
-									    ""nginx"" : {
-									      ""enabled"" : ""true"",
-									      ""ensureRunning"" : ""true"",
-									      ""files"" : [""/etc/nginx/nginx.conf""],
-									      ""sources"" : [""/var/www/html""]
-									    }
-									  }
-									  
-						          },
-" + @"
-
-						          ""users"" : {
-
-								    ""myUser"" : {
-								        ""groups"" : [""groupOne"", ""groupTwo""],
-								        ""uid"" : ""50"",
-								        ""homeDir"" : ""/tmp""
-								    }
-
-						          },
-						          ""groups"" : {
-
-									""groupOne"" : {},
-									""groupTwo"" : { ""gid"" : ""45"" }
-
-						          }
-
-
-						        }
-						      }
-						},
-						""Properties"" : {
-							""ImageId"" : ""ami-79fd7eee"",
-							""KeyName"" : ""testkey""
-						}
-					}
-				}
-			}
+{
+  ""AWSTemplateFormatVersion"" : ""2010-09-09"",
+  ""Description"" : ""Ec2 metadata"",
+  ""Resources"" : {
+    ""MyEC2Instance"" : {
+      ""Type"" : ""AWS::EC2::Instance"",
+      ""Properties"" : {
+        ""ImageId"" : ""ami-79fd7eee"",
+        ""KeyName"" : ""testkey""
+      },
+      ""Metadata"" : {
+      ""Comment"" : ""Cfn Comment"",
+        ""AWS::CloudFormation::Init"" : {
+          ""config"" : {
+            ""packages"" : {
+              ""rpm"" : {
+                ""epel"" : ""http://download.fedoraproject.org/pub/epel/5/i386/epel-release-5-4.noarch.rpm""
+              },
+              ""yum"" : {
+                ""httpd"" : [],
+                ""php"" : []
+              },
+              ""rubygems"" : {
+                ""chef"" : [ 
+                  ""0.10.2""
+                ]
+              }
+            },
+            ""sources"" : {
+              ""/etc/puppet"" : ""https://github.com/user1/cfn-demo/tarball/master""
+            },
+            ""commands"" : {
+              ""test"" : {
+                ""command"" : ""echo \""$MAGIC\"" > test.txt"",
+                ""env"" : {
+                  ""MAGIC"" : ""I come from the environment!""
+                },
+                ""cwd"" : ""~"",
+                ""test"" : ""test ! -e ~/test.txt"",
+                ""ignoreErrors"" : ""false""
+              }
+            },
+            ""files"" : {
+              ""/tmp/setup.mysql"" : {
+                ""mode""  : ""000644"",
+                ""owner"" : ""root"",
+                ""group"" : ""root""
+              }
+            },
+            ""services"" : {
+                ""sysvinit"" : {
+                  ""nginx"" : {
+                  ""enabled"" : ""true"",
+                  ""ensureRunning"" : ""true"",
+                  ""files"" : [
+                    ""/etc/nginx/nginx.conf""
+                  ],
+                  ""sources"" : [
+                    ""/var/www/html""
+                  ]
+                }
+              }
+            },
+            ""users"" : {
+              ""myUser"" : {
+                ""groups"" : [
+                  ""groupOne"",
+                  ""groupTwo""
+                ],
+                ""uid"" : ""50"",
+                ""homeDir"" : ""/tmp""
+              }
+            },
+            ""groups"" : {
+              ""groupOne"" : {},
+              ""groupTwo"" : { 
+                ""gid"" : ""45""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 ";
 /*
 									    ""content"" : { ""Fn::Join"" : ["""", [
@@ -192,7 +183,7 @@ namespace CloudFormationCsTests.Resources.EC2Tests
 */
             var template = new CFN.Template()
             {
-                Descrption = "Ec2 metadata",
+                Description = "Ec2 metadata",
                 Resources = new List<CFN.Resource>()
                 {
                     new EC2.Instance("MyEC2Instance")

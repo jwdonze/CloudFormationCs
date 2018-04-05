@@ -1,4 +1,7 @@
+using Newtonsoft.Json;
 using System;
+
+using CloudFormationCs.Converters;
 
 namespace CloudFormationCs.Entity
 {
@@ -7,26 +10,24 @@ namespace CloudFormationCs.Entity
     /// </summary>
     public class Ebs
     {
-        [EmitAsString]
         public VolumeTypes VolumeType { get; set; }
 
-        [EmitAsString]
+        [JsonConverter(typeof(LowerCaseStringConverter))]
         public Int32 Iops { get; set; }
 
-        [EmitAsString]
-        public Boolean DeleteOnTermination { get; set; }
+        [JsonConverter(typeof(LowerCaseStringConverter))]
+        public Boolean? DeleteOnTermination { get; set; } = null;
 
-        [EmitAsString]
+        [JsonConverter(typeof(LowerCaseStringConverter))]
         public Int32 VolumeSize { get; set; }
 
-        [EmitAsString]
+        [JsonConverter(typeof(LowerCaseStringConverter))]
         public bool Encrypted { get; set; }
 
         public String SnapshotId { get; set; }
 
         public Ebs()
         {
-            this.DeleteOnTermination = true;
         }
     }
 }

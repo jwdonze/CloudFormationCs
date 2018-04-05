@@ -20,7 +20,7 @@ namespace CloudFormationCs.Resources.EC2
         public bool MapPublicIpOnLaunch { get; set; }
 
         [Required(true)]
-        public Ref VpcId { get; set; }
+        public StringRef VpcId { get; set; }
 
         public Subnet()
             : base()

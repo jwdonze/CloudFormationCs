@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ namespace CloudFormationCs
     /// <summary>
     /// http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getavailabilityzones.html
     /// </summary>
-    public class Fn__GetAZs : KeyByType, IKeyValue
+    public class Fn__GetAZs : KeyByType, IWriteObject
     {
         public Fn__GetAZs()
         {
@@ -18,12 +19,12 @@ namespace CloudFormationCs
             this._attrName = attrName;
         }
 
-        public Object Value
+        public void WriteTo(JsonWriter writer, JsonSerializer serializer)
         {
-            get
-            {
-                return this._attrName;
-            }
+            writer.WriteStartObject();
+            this.WriteFunctionName(writer);
+            writer.WriteValue(this._attrName);
+            writer.WriteEndObject();
         }
 
         string _attrName;

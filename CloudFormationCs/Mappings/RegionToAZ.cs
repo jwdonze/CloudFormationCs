@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
@@ -5,6 +6,7 @@ namespace CloudFormationCs.Mappings
 {
     public class RegionToAZ : IKeyValue
     {
+        [JsonIgnore]
         public String Key { get; set; }
 
         protected Dictionary<Regions, Dictionary<String, String>> _dictionary;
@@ -16,7 +18,6 @@ namespace CloudFormationCs.Mappings
         public RegionToAZ(string name)
         {
             this.Key = name;
-            //this._dictionary = dictionary;
         }
 
         public Object Value

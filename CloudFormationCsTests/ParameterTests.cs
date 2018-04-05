@@ -27,8 +27,7 @@ namespace CloudFormationCsTests
 					},
 					""KeyName"" : {
 						""Description"" : ""Name of an existing EC2 KeyPair to enable SSH access to the instances"",
-					""Type"" : ""String"",
-					""Default"" : null
+					""Type"" : ""String""
 					}
 				}
 			} ";

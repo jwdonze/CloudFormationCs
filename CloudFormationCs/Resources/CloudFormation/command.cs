@@ -1,3 +1,5 @@
+using CloudFormationCs.Converters;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
@@ -13,11 +15,11 @@ namespace CloudFormationCs.Resources.CloudFormation
 
         public String test { get; set; }
 
-        [EmitAsString]
+        [JsonConverter(typeof(LowerCaseStringConverter))]
         public Int16? waitAfterCompletion { get; set; }
 
-        [EmitAsString]
-        public Boolean ignoreErrors { get; set; }
+        [JsonConverter(typeof(LowerCaseStringConverter))]
+        public Boolean? ignoreErrors { get; set; }
 
         public commandDef()
         {

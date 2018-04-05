@@ -1,5 +1,5 @@
 using System;
-using System.Web.Script.Serialization;
+using Newtonsoft.Json;
 
 namespace CloudFormationCs.Resources.CloudWatch
 {
@@ -32,7 +32,7 @@ namespace CloudFormationCs.Resources.CloudWatch
         [Required(false)]
         public MetricDimension[] Dimensions { get; set; }
 
-        [ScriptIgnore]
+        [JsonIgnore]
         public MetricDimension Dimensions1 { set { this.Dimensions = new MetricDimension[] { value, }; } }
 
         [Required(false)]

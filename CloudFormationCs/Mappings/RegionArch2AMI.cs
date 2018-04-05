@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
@@ -5,6 +6,7 @@ namespace CloudFormationCs.Mappings
 {
     public class RegionArch2AMI : IKeyValue
     {
+        [JsonIgnore]
         public String Key { get; set; }
 
         protected Dictionary<Regions, Dictionary<ArchTypes, string>> _dictionary;
