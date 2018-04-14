@@ -20,7 +20,11 @@ namespace CloudFormationCs
 
         public void WriteTo(JsonWriter writer, JsonSerializer serializer)
         {
-            throw new NotImplementedException();
+            writer.WriteStartObject();
+            writer.WritePropertyName("Fn::Base64");
+            var s = new Converters.StringRefConverter();
+            s.WriteJson(writer, this._topLevelKey, serializer);
+            writer.WriteEndObject();
         }
 
         private StringRef _topLevelKey;
