@@ -11,7 +11,7 @@ namespace CloudFormationCs.Resources.EC2
         public Tag[] Tags { get; set; }
 
         [Required(true)]
-        public String VpcId { get; set; }
+        public StringRef VpcId { get; set; }
 
         public NetworkAcl()
             : base()

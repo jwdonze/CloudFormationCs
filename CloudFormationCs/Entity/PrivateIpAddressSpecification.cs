@@ -8,7 +8,7 @@ namespace CloudFormationCs.Entity
 		public String PrivateIpAddress { get; set; }
 		
 		[Required(true)]
-		public Boolean Primary { get; set; }
+		public Boolean? Primary { get; set; }
 
 		public PrivateIpAddressSpecification ()
 		{

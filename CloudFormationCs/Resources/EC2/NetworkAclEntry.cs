@@ -17,7 +17,7 @@ namespace CloudFormationCs.Resources.EC2
         public EC2_ICMP Icmp { get; set; }
 
         [Required(true)]
-        public String NetworkAclId { get; set; }
+        public StringRef NetworkAclId { get; set; }
 
         [Required(RequiredAttribute.RequirementTypes.Conditional)]
         public EC2_PortRange PortRange { get; set; }

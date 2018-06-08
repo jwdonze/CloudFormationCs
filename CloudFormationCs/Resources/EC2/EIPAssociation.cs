@@ -14,7 +14,7 @@ namespace CloudFormationCs.Resources.EC2
         public String EIP { get; set; }
 
         [Required(false)]
-        public String InstanceId { get; set; }
+        public StringRef InstanceId { get; set; }
 
         [Required(false)]
         public StringRef NetworkInterfaceId { get; set; }
