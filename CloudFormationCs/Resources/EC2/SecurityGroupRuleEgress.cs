@@ -14,7 +14,7 @@ namespace CloudFormationCs.Resources.EC2
         public String IpProtocol { get; set; }
 
         [Required(RequiredAttribute.RequirementTypes.Conditional)]
-        public String DestinationSecurityGroupId { get; set; }
+        public StringRef DestinationSecurityGroupId { get; set; }
 
         [Required(true)]
         public String ToPort { get; set; }
