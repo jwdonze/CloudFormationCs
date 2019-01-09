@@ -983,6 +983,10 @@ namespace CloudFormationCs.Resources.IAM
         sqs_SendMessage,
         sqs_ReceiveMessage,
         sqs_ChangeMessageVisibility,
+        /// <summary>
+        /// Also requires sqs_ChangeMessageVisibility
+        /// </summary>
+        sqs_ChangeMessageVisibilityBatch,
         sqs_DeleteMessage,
         sqs_GetQueueAttributes,
         sqs_GetQueueUrl,
