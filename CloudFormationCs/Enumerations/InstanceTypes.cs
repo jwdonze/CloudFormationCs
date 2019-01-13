@@ -11,37 +11,37 @@ namespace CloudFormationCs
 
         #region T3
         /// <summary>
-        /// 1 CPU, .6 GiB RAM, EBS Only, Up to 5 Gbps
+        /// 2 CPU, .5 GiB RAM, EBS Only, Network up to 5 Gbps
         /// </summary>
         t3_nano,
 
         /// <summary>
-        /// 1 CPU, 1 GiB RAM, EBS Only, Up to 5 Gbps
+        /// 2 CPU, 1 GiB RAM, EBS Only, Network up to 5 Gbps
         /// </summary>
         t3_micro,
 
         /// <summary>
-        /// 1 CPU, 2 GiB RAM, EBS Only, Up to 5 Gbps
+        /// 2 CPU, 2 GiB RAM, EBS Only, Network up to 5 Gbps
         /// </summary>
         t3_small,
         
         /// <summary>
-        /// 2 CPU, 4 GiB RAM, EBS Only, Up to 5 Gbps
+        /// 2 CPU, 4 GiB RAM, EBS Only, Network up to 5 Gbps
         /// </summary>
         t3_medium,
         
         /// <summary>
-        /// 2 CPU, 8 GiB RAM, EBS Only, Up to 5 Gbps
+        /// 2 CPU, 8 GiB RAM, EBS Only, Network up to 5 Gbps
         /// </summary>
         t3_large,
         
         /// <summary>
-        /// 4 CPU, 16 GiB RAM, EBS Only, Up to 5 Gbps
+        /// 4 CPU, 16 GiB RAM, EBS Only, Network up to 5 Gbps
         /// </summary>
         t3_xlarge,
         
         /// <summary>
-        /// 8 CPU, 32 GiB RAM, EBS Only, Up to 5 Gbps
+        /// 8 CPU, 32 GiB RAM, EBS Only, Network up to 5 Gbps
         /// </summary>
         t3_2xlarge,
         #endregion
@@ -229,52 +229,7 @@ namespace CloudFormationCs
         /// </summary>
         c5d_18xlarge,
         #endregion
-
-
-
-        /// <summary>
-        /// 8 CPU, 15 GiB RAM, 1 x 60 SSD, High Net
-        /// </summary>
-        g2_2xlarge,
-
-        /// <summary>
-        /// 32 CPU, 60 GiB RAM, 2 x 120 SSD, 10 Gigabit Net
-        /// </summary>
-        g2_8xlarge,
-
-        /// <summary>
-        /// 64 CPU 	976   GiB RAM, 1 x 1,920 SSD 	10 Gigabit  Intel Xeon E7-8880 v3 	2.3
-        /// </summary>
-        x1_16large,
-        /// <summary>
-        /// 128 CPU  1,952 GiB RAM, 2 x 1,920 SSD 	20 Gigabit  Intel Xeon E7-8880 v3 	2.3
-        /// </summary>
-        x1_32xlarge,
-
-
-
-		/// <summary>
-        /// 4 CPU, 30.5 GiB RAM, 1 x 800 SSD, Moderate Net
-		/// </summary>
-		i2_xlarge,
-
-		/// <summary>
-        /// 8 CPU, 61 GiB RAM, 2 x 800 SSD, High Net
-		/// </summary>
-		i2_2xlarge,
-
-		/// <summary>
-        /// 16 CPU, 122 GiB RAM, 4 x 800 SSD, High Net
-		/// </summary>
-		i2_4xlarge,
-
-		/// <summary>
-        /// 32 CPU, 244 GiB RAM, 8 x 800 SSD, 10 Gigabit Net
-		/// </summary>
-		i2_8xlarge,
-
-
-
+        #region D2
         /// <summary>
         /// 4 CPU, 30.5 GiB RAM, 3 x 2000 HDD, Moderate Net
         /// </summary>
@@ -291,20 +246,8 @@ namespace CloudFormationCs
         /// 36 CPU, 244 GiB RAM, 24 x 2000 HDD, 10 Gigabit Net
         /// </summary>
         d2_8xlarge,
-
-        #region HPC
-        /// <summary>
-        /// 4  CPU, 61  GiB RAM, EBS Only    High    Intel Xeon E5-2686 v4   2.3 (base)  2.7 (turbo)
-        /// </summary>
-        p2_xlarge,
-        /// <summary>
-        /// 32 CPU, 488 GiB RAM, EBS Only    10 Gigabit  Intel Xeon E5-2686 v4   2.3 (base)  2.7 (turbo)
-        /// </summary>
-        p2_8xlarge,
-        /// <summary>
-        /// 64 CPU, 732 GiB RAM, EBS Only    20 Gigabit  Intel Xeon E5-2686 v4   2.3 (base)  2.7 (turbo)
-        /// </summary>
-        p2_16xlarge,
+        #endregion
+        #region ACCELERATED COMPUTING
         /// <summary>
         /// 16 CPU,	122 GiB RAM, EBS Only    Up to 10 Gigabit    Intel Xeon E5-2686 v4  	2.3 (base)  2.7 (turbo)
         /// </summary>
@@ -326,7 +269,6 @@ namespace CloudFormationCs
         /// </summary>
         f1_16xlarge,
         #endregion
-
         #region PREVIOUS GENERATION 
 
         #region M4
@@ -539,6 +481,72 @@ namespace CloudFormationCs
         /// </summary>
         [Obsolete]
         hs1_8xlarge,
+
+        /// <summary>
+        /// 8 CPU, 15 GiB RAM, 1 x 60 SSD, High Net
+        /// </summary>
+        [Obsolete]
+        g2_2xlarge,
+
+        /// <summary>
+        /// 32 CPU, 60 GiB RAM, 2 x 120 SSD, 10 Gigabit Net
+        /// </summary>
+        [Obsolete]
+        g2_8xlarge,
+
+        /// <summary>
+        /// 64 CPU 	976   GiB RAM, 1 x 1,920 SSD 	10 Gigabit  Intel Xeon E7-8880 v3 	2.3
+        /// </summary>
+        [Obsolete]
+        x1_16large,
+        /// <summary>
+        /// 128 CPU  1,952 GiB RAM, 2 x 1,920 SSD 	20 Gigabit  Intel Xeon E7-8880 v3 	2.3
+        /// </summary>
+        [Obsolete]
+        x1_32xlarge,
+
+
+
+        /// <summary>
+        /// 4 CPU, 30.5 GiB RAM, 1 x 800 SSD, Moderate Net
+        /// </summary>
+        [Obsolete]
+        i2_xlarge,
+
+        /// <summary>
+        /// 8 CPU, 61 GiB RAM, 2 x 800 SSD, High Net
+        /// </summary>
+        [Obsolete]
+        i2_2xlarge,
+
+        /// <summary>
+        /// 16 CPU, 122 GiB RAM, 4 x 800 SSD, High Net
+        /// </summary>
+        [Obsolete]
+        i2_4xlarge,
+
+        /// <summary>
+        /// 32 CPU, 244 GiB RAM, 8 x 800 SSD, 10 Gigabit Net
+        /// </summary>
+        [Obsolete]
+        i2_8xlarge,
+
+        /// <summary>
+        /// 4  CPU, 61  GiB RAM, EBS Only    High    Intel Xeon E5-2686 v4   2.3 (base)  2.7 (turbo)
+        /// </summary>
+        [Obsolete]
+        p2_xlarge,
+        /// <summary>
+        /// 32 CPU, 488 GiB RAM, EBS Only    10 Gigabit  Intel Xeon E5-2686 v4   2.3 (base)  2.7 (turbo)
+        /// </summary>
+        [Obsolete]
+        p2_8xlarge,
+        /// <summary>
+        /// 64 CPU, 732 GiB RAM, EBS Only    20 Gigabit  Intel Xeon E5-2686 v4   2.3 (base)  2.7 (turbo)
+        /// </summary>
+        [Obsolete]
+        p2_16xlarge,
+
         #endregion
         #region R4
         /// <summary>
