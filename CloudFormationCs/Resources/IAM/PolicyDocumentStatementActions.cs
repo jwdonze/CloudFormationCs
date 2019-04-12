@@ -892,6 +892,12 @@ namespace CloudFormationCs.Resources.IAM
         elasticloadbalancing_SetLoadBalancerListenerSSLCertificate,
         elasticloadbalancing_SetLoadBalancerPoliciesForBackendServer,
         elasticloadbalancing_SetLoadBalancerPoliciesOfListener,
+
+        // V2
+        elasticloadbalancing_RegisterTargets,
+        elasticloadbalancing_DeregisterTargets,
+        elasticloadbalancing_DescribeTargetHealth,
+
         #endregion
 
         #region elastictranscoder
@@ -1037,6 +1043,5 @@ namespace CloudFormationCs.Resources.IAM
 
         storagegateway_ListSTAR,
         storagegateway_DescribeSTAR,
-
     }
 }

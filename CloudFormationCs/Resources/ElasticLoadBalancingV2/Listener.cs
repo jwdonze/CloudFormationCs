@@ -13,7 +13,8 @@ namespace CloudFormationCs.Resources.ElasticLoadBalancingV2
             HTTPS,
             TCP,
         }
-        public Certificate Certificates { get; set; }
+        public Certificate[] Certificates { get; set; }
+        public Certificate Certificate { set { this.Certificates = new Certificate[] { value }; } }
 
         [Required(true)]
         public Action[] DefaultActions { get; set; }

@@ -5,7 +5,7 @@ namespace CloudFormationCs.Resources.EC2
     public class SecurityGroupRuleIngress
     {
         [Required(RequiredAttribute.RequirementTypes.Conditional)]
-        public String CidrIp { get; set; }
+        public StringRef CidrIp { get; set; }
 
         [Required(true)]
         public StringRef FromPort { get; set; }
