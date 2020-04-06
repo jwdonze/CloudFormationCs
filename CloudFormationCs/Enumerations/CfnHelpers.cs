@@ -17,7 +17,12 @@ namespace CloudFormationCs
         /// </summary>
         public static string GetNameFull(Resource res)
         {
-            return res.GetType().FullName.Replace("CloudFormationCs.Resources", "AWS").Replace(".", "::");
+            Type type = res.GetType();
+            while (!type.Namespace.StartsWith("CloudFormationCs"))
+            {
+                type = type.BaseType;
+            }
+            return type.FullName.Replace("CloudFormationCs.Resources", "AWS").Replace(".", "::");
         }
         public static string GetNameShort(KeyByType obj)
         {

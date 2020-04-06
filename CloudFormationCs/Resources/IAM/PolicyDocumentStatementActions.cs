@@ -862,6 +862,9 @@ namespace CloudFormationCs.Resources.IAM
         #endregion
 
         #region ELB
+        /// <summary>
+        /// https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_Operations.html
+        /// </summary>
         elasticloadbalancing_STAR,
         elasticloadbalancing_AddTags,
         elasticloadbalancing_ApplySecurityGroupsToLoadBalancer,

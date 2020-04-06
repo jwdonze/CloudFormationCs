@@ -11,19 +11,20 @@ namespace CloudFormationCs.Resources.EC2
         public String CidrIp { get; set; }
 
         [Required(RequiredAttribute.RequirementTypes.Conditional)]
-        public String DestinationSecurityGroupId { get; set; }
+        public StringRef DestinationSecurityGroupId { get; set; }
 
         [Required(true)]
         public Int32 FromPort { get; set; }
 
         [Required(true)]
-        public String GroupId { get; set; }
+        public StringRef GroupId { get; set; }
 
         [Required(true)]
         public String IpProtocol { get; set; }
 
         [Required(true)]
         public Int32 ToPort { get; set; }
+        public StringRef Description { get; set; }
 
         public SecurityGroupEgress()
             : base()

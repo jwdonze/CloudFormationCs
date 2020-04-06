@@ -6,6 +6,7 @@ namespace CloudFormationCs.Resources.EC2
     {
         [Required(RequiredAttribute.RequirementTypes.Conditional)]
         public StringRef CidrIp { get; set; }
+        public StringRef Description { get; set; }
 
         [Required(true)]
         public StringRef FromPort { get; set; }

@@ -11,7 +11,7 @@ namespace CloudFormationCs.Resources.EC2
         public String GroupName { get; set; }
 
         [Required(RequiredAttribute.RequirementTypes.Conditional)]
-        public String GroupId { get; set; }
+        public StringRef GroupId { get; set; }
 
         [Required(true)]
         public String IpProtocol { get; set; }
@@ -23,7 +23,7 @@ namespace CloudFormationCs.Resources.EC2
         public String SourceSecurityGroupName { get; set; }
 
         [Required(RequiredAttribute.RequirementTypes.Conditional)]
-        public String SourceSecurityGroupId { get; set; }
+        public StringRef SourceSecurityGroupId { get; set; }
 
         [Required(RequiredAttribute.RequirementTypes.Conditional)]
         public String SourceSecurityGroupOwnerId { get; set; }
@@ -33,6 +33,7 @@ namespace CloudFormationCs.Resources.EC2
 
         [Required(true)]
         public Int32 ToPort { get; set; }
+        public StringRef Description { get; set; }
 
         public SecurityGroupIngress()
             : base()

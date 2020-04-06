@@ -6,7 +6,7 @@ namespace CloudFormationCs
     public class Resource
     {
         [JsonIgnore]
-        public string ResourceIdentifier { get; private set; }
+        public string ResourceIdentifier { get; protected set; }
 
         [JsonIgnore]
         public string Version { get; set; }

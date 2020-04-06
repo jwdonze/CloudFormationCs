@@ -14,6 +14,7 @@ namespace CloudFormationCs
         us_east_1e,
         us_east_1b,
         us_east_1d,
+        us_east_1f,
     }
 }
 

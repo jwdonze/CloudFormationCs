@@ -9,13 +9,13 @@
         /// 'all' for ip addresses outside the VPC
         /// </summary>
         public string AvailabilityZone { get; set; }
-        public string Id { get; set; }
+        public StringRef Id { get; set; }
         public int Port { get; set; }
     }
     public class TargetDescriptionIp : TargetDescription
     {
         public TargetDescriptionIp() : base() { }
-        public TargetDescriptionIp(string ip, int port)
+        public TargetDescriptionIp(StringRef ip, int port)
         {
             this.AvailabilityZone = "all";
             this.Id = ip;

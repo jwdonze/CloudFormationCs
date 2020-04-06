@@ -19,6 +19,9 @@ namespace CloudFormationCs
         [EnumMember(Value = "US West (N. California)")]
         us_west_1,
 
+        [EnumMember(Value = "Asia Pacific (Hong Kong)")]
+        ap_east_1,
+
         [EnumMember(Value = "Asia Pacific (Mumbai)")]
         ap_south_1,
 
@@ -70,6 +73,8 @@ namespace CloudFormationCs
         [EnumMember(Value = "AWS GovCloud (US-East)")]
         us_gov_west_1,
 
+        [EnumMember(Value = "Middle East (Bahrain)")]
+        me_south_1,
 
     }
 }

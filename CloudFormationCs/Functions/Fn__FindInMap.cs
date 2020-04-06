@@ -17,8 +17,8 @@ namespace CloudFormationCs
         public Fn__FindInMap(String mapName, StringRef topLevelKey, StringRef secondLevelKey)
         {
             this._mapName = mapName;
-            this._topLevelKey     =topLevelKey;
-            this._secondLevelKey  =secondLevelKey;
+            this._topLevelKey = topLevelKey;
+            this._secondLevelKey = secondLevelKey;
         }
 
         public void WriteTo(JsonWriter writer, JsonSerializer serializer)
