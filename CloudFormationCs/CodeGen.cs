@@ -167,7 +167,43 @@ namespace CloudFormationCs
 
                     tableFieldNameClass = tableFieldNameClass.AddMembers(propertyDeclaration);
                 }
-
+                if (level == 0)
+                {
+                    tableFieldNameClass = tableFieldNameClass.AddMembers(
+                        SyntaxFactory.ConstructorDeclaration(
+                            SyntaxFactory.Identifier(className))
+                        .WithModifiers(
+                            SyntaxFactory.TokenList(
+                                SyntaxFactory.Token(SyntaxKind.PublicKeyword)))
+                        .WithInitializer(
+                            SyntaxFactory.ConstructorInitializer(
+                                SyntaxKind.BaseConstructorInitializer,
+                                SyntaxFactory.ArgumentList()))
+                        .WithBody(
+                            SyntaxFactory.Block()),
+                        SyntaxFactory.ConstructorDeclaration(
+                            SyntaxFactory.Identifier(className))
+                        .WithModifiers(
+                            SyntaxFactory.TokenList(
+                                SyntaxFactory.Token(SyntaxKind.PublicKeyword)))
+                        .WithParameterList(
+                            SyntaxFactory.ParameterList(
+                                SyntaxFactory.SingletonSeparatedList<ParameterSyntax>(
+                                    SyntaxFactory.Parameter(
+                                        SyntaxFactory.Identifier("resourceIdentifier"))
+                                    .WithType(
+                                        SyntaxFactory.IdentifierName("StringOrEnum")))))
+                        .WithInitializer(
+                            SyntaxFactory.ConstructorInitializer(
+                                SyntaxKind.BaseConstructorInitializer,
+                                SyntaxFactory.ArgumentList(
+                                    SyntaxFactory.SingletonSeparatedList<ArgumentSyntax>(
+                                        SyntaxFactory.Argument(
+                                            SyntaxFactory.IdentifierName("resourceIdentifier"))))))
+                            .WithBody(
+                                SyntaxFactory.Block())
+                        );
+                }
 
                 @namespace = @namespace.AddMembers(tableFieldNameClass);
 
