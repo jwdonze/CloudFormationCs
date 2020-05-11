@@ -146,6 +146,10 @@ namespace CloudFormationCs
                             break;
                     }
                     TypeSyntax typeSyntax = SyntaxFactory.ParseTypeName(type);
+                    if (type == "Boolean")
+                    {
+                        typeSyntax = SyntaxFactory.NullableType(typeSyntax);
+                    }
                     if (isArray)
                     {
                         typeSyntax = SyntaxFactory.ArrayType(typeSyntax)
