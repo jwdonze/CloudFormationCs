@@ -13,10 +13,20 @@ namespace CloudFormationCs.Resources.WAFv2
             set;
         }
 
-        public StringRef Type
+        public Types Type
         {
             get;
             set;
+        }
+
+        public enum Types
+        {
+            CMD_LINE, 
+            COMPRESS_WHITE_SPACE, 
+            HTML_ENTITY_DECODE, 
+            LOWERCASE, 
+            NONE, 
+            URL_DECODE,
         }
     }
 }

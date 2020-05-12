@@ -13,7 +13,7 @@ namespace CloudFormationCs.Resources.WAFv2
             set;
         }
 
-        public StringRef PositionalConstraint
+        public PositionalConstraints? PositionalConstraint
         {
             get;
             set;
@@ -35,6 +35,14 @@ namespace CloudFormationCs.Resources.WAFv2
         {
             get;
             set;
+        }
+        public enum PositionalConstraints
+        {
+            CONTAINS, 
+            CONTAINS_WORD, 
+            ENDS_WITH, 
+            EXACTLY, 
+            STARTS_WITH,
         }
     }
 }

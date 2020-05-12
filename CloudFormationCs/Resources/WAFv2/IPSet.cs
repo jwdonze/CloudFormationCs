@@ -3,11 +3,11 @@ namespace CloudFormationCs.Resources.WAFv2
     using System;
 
     ///<summary>
-    /// https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html
+    /// https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-ipset.html
     ///</summary>
-    public class WebACL : Resource
+    public class IPSet : Resource
     {
-        public DefaultAction DefaultAction
+        public StringRef[] Addresses
         {
             get;
             set;
@@ -19,13 +19,13 @@ namespace CloudFormationCs.Resources.WAFv2
             set;
         }
 
-        public StringRef Name
+        public IPAddressVersions? IPAddressVersion
         {
             get;
             set;
         }
 
-        public Rule[] Rules
+        public StringRef Name
         {
             get;
             set;
@@ -43,23 +43,22 @@ namespace CloudFormationCs.Resources.WAFv2
             set;
         }
 
-        public VisibilityConfig VisibilityConfig
-        {
-            get;
-            set;
-        }
-
-        public WebACL(): base()
+        public IPSet(): base()
         {
         }
 
-        public WebACL(StringOrEnum resourceIdentifier): base(resourceIdentifier)
+        public IPSet(StringOrEnum resourceIdentifier): base(resourceIdentifier)
         {
         }
         public enum Scopes
         {
             CLOUDFRONT,
             REGIONAL,
+        }
+        public enum IPAddressVersions
+        {
+            IPV4,
+            IPV6,
         }
     }
 }
