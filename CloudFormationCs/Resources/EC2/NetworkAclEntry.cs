@@ -1,3 +1,5 @@
+using CloudFormationCs.Converters;
+using Newtonsoft.Json;
 using System;
 
 namespace CloudFormationCs.Resources.EC2
@@ -23,10 +25,10 @@ namespace CloudFormationCs.Resources.EC2
         public EC2_PortRange PortRange { get; set; }
 
         [Required(true)]
-        public Int32 Protocol { get; set; }
+        public IpProtocols? Protocol { get; set; }
 
         [Required(true)]
-        public String RuleAction { get; set; }
+        public RuleActions? RuleAction { get; set; }
 
         [Required(true)]
         public Int32 RuleNumber { get; set; }
@@ -39,6 +41,20 @@ namespace CloudFormationCs.Resources.EC2
         public NetworkAclEntry(StringOrEnum resourceIdentifier)
             : base(resourceIdentifier)
         {
+        }
+
+        public enum RuleActions
+        { 
+            allow,
+            deny,
+        }
+        [JsonConverter(typeof(EnumToIntConverter))]
+        public enum IpProtocols
+        {
+            ALL = -1,
+            icmp = 1,
+            tcp = 6,
+            udp = 17,
         }
     }
 }

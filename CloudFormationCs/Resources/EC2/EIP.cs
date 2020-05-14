@@ -12,6 +12,7 @@ namespace CloudFormationCs.Resources.EC2
 
         [Required(RequiredAttribute.RequirementTypes.Conditional)]
         public Domains Domain { get; set; }
+        public Tag[] Tags { get; set; }
 
         public enum Domains
         {
