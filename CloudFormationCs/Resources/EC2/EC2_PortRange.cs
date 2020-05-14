@@ -15,8 +15,16 @@ namespace CloudFormationCs.Resources.EC2
 
         public EC2_PortRange(int port)
         {
-            this.From = port;
-            this.To = port;
+            if (port == -1)
+            {
+                this.From = 1;
+                this.To = 65535;
+            }
+            else
+            {
+                this.From = port;
+                this.To = port;
+            }
         }
         public EC2_PortRange(int fromPort, int toPort)
         {
