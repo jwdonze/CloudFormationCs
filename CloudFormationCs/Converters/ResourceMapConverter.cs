@@ -32,9 +32,14 @@ namespace CloudFormationCs.Converters
                     {
                         writer.WriteValue(res.DependsOn[0]);
                     }
-                    else
+                    else if (res.DependsOn.Length > 1)
                     {
-                        writer.WriteValue(res);
+                        writer.WriteStartArray();
+                        foreach (string dep in res.DependsOn)
+                        {
+                            writer.WriteValue(dep);
+                        }
+                        writer.WriteEndArray();
                     }
                 }
                 writer.WritePropertyName("Properties");
