@@ -29,7 +29,7 @@ namespace CloudFormationCs.Entity
                 Ebs = new Ebs()
                 {
                     VolumeSize = sizeInGb,
-                    VolumeType = VolumeTypes.gp2,
+                    VolumeType = VolumeTypes.gp3,
                 },
             };
         }
@@ -40,7 +40,7 @@ namespace CloudFormationCs.Entity
                 DeviceName = "/dev/sda1",
                 Ebs = new Ebs()
                 {
-                    VolumeType = VolumeTypes.gp2,
+                    VolumeType = VolumeTypes.gp3,
                 },
             };
         }
