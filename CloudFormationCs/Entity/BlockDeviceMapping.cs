@@ -17,7 +17,7 @@ namespace CloudFormationCs.Entity
 
         /// <summary>
         /// BlockDeviceMappings for specifying just the root device size (drive C on windows)
-        /// Also specifies gp2 volume type (General Purpose SSD)
+        /// Also specifies gp3 volume type (General Purpose SSD)
         /// </summary>
         /// <param name="sizeInGb"></param>
         /// <returns></returns>
