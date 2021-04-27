@@ -38,6 +38,9 @@ namespace CloudFormationCs.Resources.ElastiCache
         public String EngineVersion { get; set; }
 
         [Required(false)]
+        public Boolean? MultiAZEnabled { get; set; }
+
+        [Required(false)]
         public NodeGroupConfiguration[] NodeGroupConfiguration { get; set; }
 
         [Required(false)]
