@@ -75,6 +75,10 @@ namespace CloudFormationCs
         {
             return new StringRef(d);
         }
+        public static implicit operator StringRef(Fn__Sub d)
+        {
+            return new StringRef(d);
+        }
     }
 }
 

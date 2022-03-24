@@ -11,7 +11,7 @@ namespace CloudFormationCs.Resources.EC2
         public Int32 BgpAsn { get; set; }
 
         [Required(true)]
-        public String IpAddress { get; set; }
+        public StringRef IpAddress { get; set; }
 
         [Required(false)]
         public Tag[] Tags { get; set; }
